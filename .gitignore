@@ -34,3 +34,8 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Blend temp
+*.blend1
+*.blend[0-9]+
+
