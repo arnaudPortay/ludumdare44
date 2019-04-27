@@ -6,15 +6,12 @@ public class crowdManager : MonoBehaviour
 {
     public float feedingRate;
     public string startingFoodName;
-
-    public arena arena;
-
+    public float maxInaccuracy;
+    public GameObject[] crowdMembers;
     public GameObject player; 
+
     private Object currentFoodType;
     private Object [] foodTypes;
-
-    private GameObject dummyCharacter;
-
     private float timer = 0.0f;
 
     private void Awake() 
@@ -29,9 +26,7 @@ public class crowdManager : MonoBehaviour
             {
                 currentFoodType = lFood;
             }
-        }
-
-        // @TODO Load empty character 
+        }     
     }
 
     // Start is called before the first frame update
@@ -47,24 +42,35 @@ public class crowdManager : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        timer += Time.fixedDeltaTime;
+        timer += Time.fixedDeltaTime;        
 
         if (timer >= feedingRate)
         {
-            // Compute shooting direction
-            Vector3 lTarget = new Vector3(
-                Random.Range(arena.xmin, arena.xmax),
-                Vector2.Distance(new Vector2(arena.xmin, arena.zmin), new Vector2(arena.xmax, arena.zmax) ),
-                Random.Range(arena.zmin, arena.zmax)
-            );
+            // Get a random crowd member
+            if (crowdMembers.Length > 0)
+            {
+                GameObject lCrowdMember = crowdMembers[Mathf.FloorToInt(Random.Range(0, crowdMembers.Length))];
 
-            lTarget.Normalize();
-            
-            // @TODO Shoot
+                // Compute shooting direction
+                Vector3 lTarget = new Vector3( 
+                    player.transform.position.x + Random.Range(-maxInaccuracy, maxInaccuracy),                
+                    player.transform.position.y,
+                    player.transform.position.z + Random.Range(-maxInaccuracy, maxInaccuracy)
+                );
 
+                Vector3 lDirection = lTarget - lCrowdMember.transform.position;
+                lDirection.y = 0;
+                lDirection.Normalize();
+                // Set the y axis
+                lDirection.y = Mathf.Clamp(Vector3.Distance(lCrowdMember.transform.position, lTarget),5, 15) + Random.Range(0,maxInaccuracy);
+                
+                // @TODO Uncomment once character
+                // character lCharacter = lCrowdMember.GetComponent<character>(); // Character script
+                // lCharacter.DistanceWeapon = Instantiate(currentFoodType, /*Hand position */, /* Hand Rotation */);
+                // lCharacter.shoot(lDirection);
 
-
-            timer = 0.0f;
+            }
+            timer = 0.0f;           
         }        
     }
 }
