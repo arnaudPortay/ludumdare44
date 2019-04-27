@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_Movement : MonoBehaviour
+public class Player_Behaviour : Character
 {
     public float speed = 6f;   
 
@@ -68,7 +68,6 @@ public class Player_Movement : MonoBehaviour
 
             // Ensure the vector is entirely along the floor plane.
             playerToMouse.y = 0f;
-            Debug.Log("playerToMouse :" + playerToMouse);
             // Create a quaternion (rotation) based on looking down the vector from the player to the mouse.
             Quaternion newRotatation = Quaternion.LookRotation (playerToMouse);
 
