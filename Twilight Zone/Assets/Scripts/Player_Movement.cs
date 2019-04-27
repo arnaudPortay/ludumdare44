@@ -33,7 +33,7 @@ public class Player_Movement : MonoBehaviour
         Move (h, v);
 
         // Turn the player to face the mouse cursor.
-        //Turning ();
+        Turning ();
 
         // Animate the player.
         //Animating (h, v);
@@ -57,7 +57,6 @@ public class Player_Movement : MonoBehaviour
     {
         // Create a ray from the mouse cursor on screen in the direction of the camera.
         Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
-
         // Create a RaycastHit variable to store information about what was hit by the ray.
         RaycastHit floorHit;
 
@@ -69,7 +68,7 @@ public class Player_Movement : MonoBehaviour
 
             // Ensure the vector is entirely along the floor plane.
             playerToMouse.y = 0f;
-
+            Debug.Log("playerToMouse :" + playerToMouse);
             // Create a quaternion (rotation) based on looking down the vector from the player to the mouse.
             Quaternion newRotatation = Quaternion.LookRotation (playerToMouse);
 
