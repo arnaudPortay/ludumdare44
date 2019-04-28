@@ -5,7 +5,6 @@ using UnityEngine;
 public class Player_Behaviour : Character
 {
     public float speed = 6f;   
-
     Vector3 movement;                   // The vector to store the direction of the player's movement.
     Animator anim;                      // Reference to the animator component.
     Rigidbody playerRigidbody;          // Reference to the player's rigidbody.
