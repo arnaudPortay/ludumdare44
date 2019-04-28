@@ -5,6 +5,9 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     public float hp = 100f;
+
+    public int lMaximalHealth;
+
     public GameObject distanceWeapon; 
     public GameObject meleeWeapon;  
     // Start is called before the first frame update
@@ -21,7 +24,22 @@ public class Character : MonoBehaviour
              if (gameObject.CompareTag("Enemy"))
             {
                 Destroy(gameObject,0);
-            }           
+            }   
+
+            if (gameObject.CompareTag("Player"))
+            {
+                // GAME END
+
+            }              
+        }
+
+        //Maximal health
+         if (hp > lMaximalHealth)
+        {
+             if (gameObject.CompareTag("Player"))
+            {
+                hp = lMaximalHealth;
+            }          
         }
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class foodBehavior : Projectile
 {
-    public int lPowerHealth;
+    public int lCarePower;
     
     private void OnTriggerEnter(Collider other) {
         
@@ -17,7 +17,7 @@ public class foodBehavior : Projectile
 
         if (other.gameObject.CompareTag("Player") && waitForDestroy)
         { 
-            other.gameObject.GetComponent<Character>().hp += lPowerHealth;
+            other.gameObject.GetComponent<Character>().hp += lCarePower;
             Destroy(gameObject, 0);
             Debug.Log(other.gameObject.GetComponent<Character>().hp ); 
         }
