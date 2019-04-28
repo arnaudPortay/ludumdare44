@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3650440972275837190}
   - component: {fileID: 3571850220649242746}
   m_Layer: 0
-  m_Name: EnnemiControllerObject
+  m_Name: EnemyControllerObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,3 +43,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec825a2672b4b22cd950cff463e51b50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnPoint: {fileID: 0}
+  EnemyType: {fileID: 0}
+  MaxSpawRate: 5
+  MaxNbWaves: 3
+  MaxNbEnemies: 15
+  DistributionCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
