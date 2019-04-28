@@ -472,7 +472,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f76577ed4ae29c743b6fe420995d5048,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.13
+      value: 0.099
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f76577ed4ae29c743b6fe420995d5048,
         type: 3}
@@ -482,7 +482,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f76577ed4ae29c743b6fe420995d5048,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.76
+      value: -2.8
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f76577ed4ae29c743b6fe420995d5048,
         type: 3}
@@ -568,8 +568,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!65 &54963529
-BoxCollider:
+--- !u!136 &54963529
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -578,9 +578,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.7246368, y: 2.3240771, z: 1.3801532}
-  m_Center: {x: -0.07519424, y: 1.1985979, z: -0.19007671}
+  m_Radius: 0.6582258
+  m_Height: 2.8374698
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: -0.1}
 --- !u!1 &141552020
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,6 +665,26 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.35626522, y: 0.7435243, z: -0.09620449}
     m_Extent: {x: 0.68224704, y: 0.8911022, z: 0.5787436}
   m_DirtyAABB: 0
+--- !u!1 &332019436 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8882965778062551700, guid: f76577ed4ae29c743b6fe420995d5048,
+    type: 3}
+  m_PrefabInstance: {fileID: 54963524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &332019438
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332019436}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.002
+  m_Height: 0.01249645
+  m_Direction: 1
+  m_Center: {x: -7.056147e-11, y: 0.0012482256, z: -0.0000000016625393}
 --- !u!1001 &594798531
 PrefabInstance:
   m_ObjectHideFlags: 0

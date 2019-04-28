@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85aa299806752fc49b8b0121678eefd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleTime: 0.5
+  idleTime: 2
 --- !u!65 &3226583654323122398
 BoxCollider:
   m_ObjectHideFlags: 0

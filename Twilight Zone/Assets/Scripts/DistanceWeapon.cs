@@ -5,6 +5,7 @@ using UnityEngine;
 public class DistanceWeapon : Weapon
 {
     public GameObject projectile;
+    public Vector3 ThrowDirection;
     private void Awake() 
     {
         Init();
@@ -14,7 +15,7 @@ public class DistanceWeapon : Weapon
         if (timer >= attackRate)
         {
             GameObject ltest = Instantiate(projectile, transform.position, transform.rotation);
-            ltest.GetComponent<Projectile>().shoot(transform.up*1000);
+            ltest.GetComponent<Projectile>().shoot(transform.TransformVector(ThrowDirection).normalized*1000);
             timer = 0.0f;        
         }
     }
