@@ -2,17 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class foodBehavior : MonoBehaviour
+public class foodBehavior : Projectile
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+    public int lPowerHealth;
+    
+    private void OnTriggerEnter(Collider other) {
         
-    }
+        if (other.gameObject.CompareTag("Player") && !waitForDestroy)
+        { 
+            other.gameObject.GetComponent<Character>().hp -= damage;
+            Debug.Log(other.gameObject.GetComponent<Character>().hp ); 
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.gameObject.CompareTag("Player") && waitForDestroy)
+        { 
+            other.gameObject.GetComponent<Character>().hp += lPowerHealth;
+            Debug.Log(other.gameObject.GetComponent<Character>().hp ); 
+        }
+
+        if (other.gameObject.CompareTag("Floor"))
+        {
+            waitForDestroy = true;
+            Destroy(gameObject, idleTime);
+        }
     }
 }

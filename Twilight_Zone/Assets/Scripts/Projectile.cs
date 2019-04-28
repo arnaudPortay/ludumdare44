@@ -9,7 +9,7 @@ public class Projectile : MonoBehaviour
 
     public int damage;
 
-    private bool waitForDestroy;
+    protected bool waitForDestroy;
 
     private void Awake() 
     {
