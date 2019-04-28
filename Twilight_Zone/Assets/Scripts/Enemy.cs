@@ -15,11 +15,11 @@ public class Enemy : Character
     {
         
     }
-     public override void loseBlood(int damage)
+     override public void loseBlood(int damage)
     {
-        base.loseBlood(damage);
+        base.loseBlood(damage); 
         if (hp <= 0)
-        {            
+        {                 
             Destroy(gameObject,0);             
         }
     }

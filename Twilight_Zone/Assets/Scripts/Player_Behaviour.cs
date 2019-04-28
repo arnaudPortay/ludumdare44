@@ -11,6 +11,8 @@ public class Player_Behaviour : Character
     int floorMask;                      // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
     float camRayLength = 100f;          // The length of the ray from the camera into the scene.
 
+    public WaveletUI waveletUi;
+
     void Awake ()
     {
         // Create a layer mask for the floor layer.
@@ -103,6 +105,7 @@ public class Player_Behaviour : Character
         }
         Debug.Log("Damage = " + damage);
         Debug.Log("(-) hp = " + hp);
+        waveletUi.updateHealth();
     }
 
     override public void gainBlood(int healthPower)
@@ -114,6 +117,8 @@ public class Player_Behaviour : Character
             hp = lMaximalHealth;         
         }
         Debug.Log("(+) hp = " + hp);
+        waveletUi.updateHealth();
+
     }
 
 }
