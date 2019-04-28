@@ -25,6 +25,15 @@ public class Player_Behaviour : Character
 
     void FixedUpdate ()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+           shoot();
+        }
+        else if (Input.GetMouseButtonDown(1))
+        {
+            hit();
+        }
+
         // Store the input axes.
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");

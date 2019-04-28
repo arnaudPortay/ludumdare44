@@ -262,7 +262,6 @@ GameObject:
   - component: {fileID: 24128951}
   - component: {fileID: 24128950}
   - component: {fileID: 24128952}
-  - component: {fileID: 24128954}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -415,20 +414,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!114 &24128954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 24128949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f93e860485a6f24cbb716d47d600388, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceWeapon: {fileID: 3226583654323122392, guid: b20d007b5d84018468a2d3dace130ca8,
-    type: 3}
 --- !u!95 &24128955
 Animator:
   serializedVersion: 3
@@ -458,7 +443,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24128949}
   m_LocalRotation: {x: -0, y: 0.99252087, z: -0, w: -0.12207545}
-  m_LocalPosition: {x: 0.18866768, y: -0.4466052, z: 0.21644557}
+  m_LocalPosition: {x: 0.18866768, y: 0.55, z: 0.21644557}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 141552021}
@@ -575,7 +560,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54963526}
   serializedVersion: 2
-  m_Mass: 2
+  m_Mass: 1
   m_Drag: Infinity
   m_AngularDrag: Infinity
   m_UseGravity: 1
@@ -696,7 +681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.4466052
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 4e5a0d387dc27394b81600988ad0216f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -909,6 +894,7 @@ GameObject:
   m_Component:
   - component: {fileID: 766773347}
   - component: {fileID: 766773348}
+  - component: {fileID: 766773349}
   m_Layer: 0
   m_Name: DistanceWeapon
   m_TagString: Untagged
@@ -981,6 +967,22 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.21740456, y: -0.00000009685755, z: 0.10632968}
     m_Extent: {x: 0.7098157, y: 0.04438655, z: 0.32349676}
   m_DirtyAABB: 0
+--- !u!114 &766773349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766773346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71115184bba21343aab68bdd75fd3a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackValue: 0
+  attackRate: 0.2
+  projectile: {fileID: 3226583654323122392, guid: b20d007b5d84018468a2d3dace130ca8,
+    type: 3}
 --- !u!1 &883807725
 GameObject:
   m_ObjectHideFlags: 0
