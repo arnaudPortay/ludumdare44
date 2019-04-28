@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 3226583654323122398}
   - component: {fileID: 3226583654323122393}
   - component: {fileID: 3226583654323122370}
-  m_Layer: 0
+  - component: {fileID: -4416803877038296571}
+  m_Layer: 8
   m_Name: distanceWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,10 +89,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3226583654323122392}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.1, y: 1.1, z: 1.1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3226583654323122393
 MonoBehaviour:
@@ -107,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackValue: 0
   attackRate: 0
-  handHotspot: {fileID: 0}
+  idleTime: 5
 --- !u!54 &3226583654323122370
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -124,3 +125,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &-4416803877038296571
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3226583654323122392}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
