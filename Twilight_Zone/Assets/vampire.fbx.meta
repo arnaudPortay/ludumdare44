@@ -74,11 +74,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Wave (1)
-      takeName: Wave
+      name: LowerArms.001
+      takeName: LowerArms.001
       internalID: 273291971771927100
       firstFrame: 0
-      lastFrame: 23
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -528,7 +528,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.003980289
+    globalScale: 0.3980289
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1
