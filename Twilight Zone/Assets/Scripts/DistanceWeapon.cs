@@ -4,36 +4,19 @@ using UnityEngine;
 
 public class DistanceWeapon : Weapon
 {
-    public float idleTime;
-    private Rigidbody rb;
-
-    private bool waitForDestroy;
-
+    public GameObject projectile;
+    public Vector3 ThrowDirection;
     private void Awake() 
     {
         Init();
-        rb = this.gameObject.GetComponent<Rigidbody>();
-        waitForDestroy = false;      
     }
-    public void shoot(Vector3 pForce)
+    public void shoot()
     {
         if (timer >= attackRate)
         {
-            rb.AddForce(pForce);
+            GameObject ltest = Instantiate(projectile, transform.position, transform.rotation);
+            ltest.GetComponent<Projectile>().shoot(transform.TransformVector(ThrowDirection).normalized*1000);
             timer = 0.0f;        
-        }
-    }
-
-    private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.CompareTag("Enemy") && !waitForDestroy)
-        {            
-            Destroy(other.gameObject,1);
-        }
-
-        if (other.gameObject.CompareTag("Floor"))
-        {
-            waitForDestroy = true;
-            Destroy(gameObject, idleTime);
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class DanceManager : MonoBehaviour
 {
     bool danceStarted;
@@ -22,4 +21,11 @@ public class DanceManager : MonoBehaviour
     {
         
     }
+}
+
+public class DanceMove
+{
+    List<KeyCode> keyCombination;
+    string        name;
+
 }

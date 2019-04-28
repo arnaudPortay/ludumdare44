@@ -19,13 +19,13 @@ public class Character : MonoBehaviour
         
     }
 
-    void hit() 
+    protected void hit() 
     {
 
     }
 
-    void shoot(Vector3 direction)
+    protected void shoot()
     {
-
+        distanceWeapon.GetComponent <DistanceWeapon> ().shoot();
     }
 }
