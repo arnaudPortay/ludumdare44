@@ -137,4 +137,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idleTime: 600
   damage: 20
-  lPowerHealth: 200
+  lCarePower: 20

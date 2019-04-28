@@ -92,4 +92,28 @@ public class Player_Behaviour : Character
         // Tell the animator whether or not the player is walking.
         anim.SetBool ("IsWalking", walking);
     }
+
+
+    override public void loseBlood(int damage)
+    {
+        base.loseBlood(damage);
+        if (hp <= 0)
+        {            
+            //Destroy(gameObject,0);               
+        }
+        Debug.Log("Damage = " + damage);
+        Debug.Log("(-) hp = " + hp);
+    }
+
+    override public void gainBlood(int healthPower)
+    {   
+        base.gainBlood(healthPower);
+
+         if (hp > lMaximalHealth)
+        {
+            hp = lMaximalHealth;         
+        }
+        Debug.Log("(+) hp = " + hp);
+    }
+
 }
