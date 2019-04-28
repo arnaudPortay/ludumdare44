@@ -12,19 +12,27 @@ public class EnemyController : MonoBehaviour
 
     public int  MaxNbWaves = 3;
 
-    public bool NoMoreWaves
+    public int MaxNbEnemies = 15;
+
+    public AnimationCurve DistributionCurve;
+
+    public bool HasNoMoreWaves
     {
         get
         {
-            return currentWaveIndex == MaxNbWaves;
+            return currentWaveIndex >= MaxNbWaves;
         }
     }
 
     private float timer;
 
-    private int currentWaveIndex = -1;
+    private int currentWaveIndex = 0;
 
     private List<GameObject> currentLivingEnnemies = new List<GameObject>();
+
+    private List<int> nbMaxEnemiesPerWave = new List<int>();
+
+    private bool needsSpawn = true;
 
     // Start is called before the first frame update
     void Start()
@@ -36,22 +44,38 @@ public class EnemyController : MonoBehaviour
     {
         //Init timer
         timer = 0.0f;
+
+        for(int i = 0; i < MaxNbWaves; ++i)
+        {
+            float x = i > 0 ? 1.0f/(MaxNbWaves - i) : 0.0f;
+            nbMaxEnemiesPerWave.Insert(nbMaxEnemiesPerWave.Count, (int) (MaxNbEnemies * DistributionCurve.Evaluate(x)));
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(NoMoreWaves)
+        if(HasNoMoreWaves)
         {
             return;
         }
 
-        if(currentLivingEnnemies.Count == 0)
+        if(currentLivingEnnemies.Count == 0 || Input.GetMouseButtonDown(0))
         {
             currentWaveIndex++;
+        }
 
-            GameObject enemy = Instantiate(EnemyType, randomizePosition(transform), transform.rotation);
+        if(needsSpawn && currentLivingEnnemies.Count < nbMaxEnemiesPerWave[currentWaveIndex])
+        {
+            GameObject enemy = Instantiate(EnemyType, randomizePosition(SpawnPoint.transform), transform.rotation);
             currentLivingEnnemies.Insert(currentLivingEnnemies.Count, enemy);
+            needsSpawn = false;
+        }
+
+        if(timer >= 1.0f / MaxSpawRate)
+        {
+            timer = 0.0f;
+            needsSpawn = true;
         }
     }
 

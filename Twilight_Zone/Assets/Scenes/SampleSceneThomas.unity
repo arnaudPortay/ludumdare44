@@ -257,7 +257,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 15520843}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fe9b90a96e71974485ff0cec7b5ebbe, type: 3}
+  m_Script: {fileID: 11500000, guid: 615e91e418de3f6dfacca89760d6546f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Clips:
@@ -418,6 +418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
+  lMaximalHealth: 0
   distanceWeapon: {fileID: 766773346}
   meleeWeapon: {fileID: 883807725}
   speed: 6
@@ -493,6 +494,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: f76577ed4ae29c743b6fe420995d5048,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: efadb21b20409f34baa4d97bf697d621, type: 2}
     - target: {fileID: -4216859302048453862, guid: f76577ed4ae29c743b6fe420995d5048,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -575,6 +581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
+  lMaximalHealth: 0
   distanceWeapon: {fileID: 0}
   meleeWeapon: {fileID: 0}
 --- !u!54 &54963528
@@ -1223,6 +1230,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: vampire
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 77bf8b80f4f9c1048bde802346b577b1,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: db6790b5dcc22ca44969e6cd05afcf89, type: 2}
     - target: {fileID: -4216859302048453862, guid: 77bf8b80f4f9c1048bde802346b577b1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1293,11 +1305,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 77bf8b80f4f9c1048bde802346b577b1,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: db6790b5dcc22ca44969e6cd05afcf89, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77bf8b80f4f9c1048bde802346b577b1, type: 3}
 --- !u!1 &1164037140
@@ -1330,6 +1337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
+  lMaximalHealth: 0
   distanceWeapon: {fileID: 0}
   meleeWeapon: {fileID: 0}
 --- !u!4 &1164037142
