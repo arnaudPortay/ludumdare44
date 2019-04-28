@@ -15,7 +15,9 @@ public class DistanceWeapon : Weapon
         if (timer >= attackRate)
         {
             GameObject ltest = Instantiate(projectile, transform.position, transform.rotation);
-            ltest.GetComponent<Projectile>().shoot(transform.TransformVector(ThrowDirection).normalized*1000);
+            Projectile lTestProjectile = ltest.GetComponent<Projectile>();
+            lTestProjectile.damage = attackValue;
+            lTestProjectile.shoot(transform.TransformVector(ThrowDirection).normalized*1000);
             timer = 0.0f;        
         }
     }

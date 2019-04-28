@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idleTime: 2
+  damage: 25
 --- !u!65 &3226583654323122398
 BoxCollider:
   m_ObjectHideFlags: 0
