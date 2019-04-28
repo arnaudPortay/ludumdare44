@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    float hp = 100f;
+    public float hp = 100f;
     public GameObject distanceWeapon; 
     public GameObject meleeWeapon;  
     // Start is called before the first frame update
