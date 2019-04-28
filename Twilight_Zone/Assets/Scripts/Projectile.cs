@@ -7,7 +7,9 @@ public class Projectile : MonoBehaviour
     public float idleTime;
     private Rigidbody rb;
 
-    private bool waitForDestroy;
+    public int damage;
+
+    protected bool waitForDestroy;
 
     private void Awake() 
     {
@@ -21,12 +23,9 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Enemy") && !waitForDestroy)
-        {  
-           // other.gameObject.GetComponent<Character>().hp = other.gameObject.GetComponent<Character>().hp - other.gameObject.GetComponent<Weapon>().attackValue;
-        other.gameObject.GetComponent<Character>().hp -= 1;
-
+        {          
+            other.gameObject.GetComponent<Character>().hp -= damage;
             Debug.Log(other.gameObject.GetComponent<Character>().hp );    
-            //Destroy(other.gameObject,1);
         }
 
         if (other.gameObject.CompareTag("Floor"))

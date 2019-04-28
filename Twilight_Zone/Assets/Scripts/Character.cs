@@ -16,7 +16,13 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (hp <= 0)
+        {
+             if (gameObject.CompareTag("Enemy"))
+            {
+                Destroy(gameObject,0);
+            }           
+        }
     }
 
     protected void hit() 
@@ -28,4 +34,5 @@ public class Character : MonoBehaviour
     {
         distanceWeapon.GetComponent <DistanceWeapon> ().shoot();
     }
+
 }
