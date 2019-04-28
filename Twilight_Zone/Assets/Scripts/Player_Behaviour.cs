@@ -20,6 +20,7 @@ public class Player_Behaviour : Character
         // Set up references.
         anim = GetComponent <Animator> ();
         playerRigidbody = GetComponent <Rigidbody> ();
+        waveletUi.updateHealth();
     }
 
 
