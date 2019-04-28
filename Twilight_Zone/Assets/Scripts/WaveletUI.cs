@@ -8,6 +8,7 @@ public class WaveletUI : MonoBehaviour
     public int CurrentMaxHeight;
 
     public int height;
+    public Character player;
 
     private RectTransform lRectTransform;
 
@@ -29,23 +30,24 @@ public class WaveletUI : MonoBehaviour
         CurrentMaxHeight = (int)newY;
      }
 
-    public void setHealth(float pHealth)
+    public void updateHealth()
     {
-
+        float playerHealthPercentage = (float)player.hp*100f/(float)player.lMaximalHealth;
+        
+        float newY = (CurrentMaxHeight * playerHealthPercentage)/100f;
+        
+        // Do not go over max height
+        newY = Mathf.Min(newY, CurrentMaxHeight);
+        lRectTransform.sizeDelta = new Vector2(lRectTransform.sizeDelta.x, newY);
     } 
 
     // Start is called before the first frame update
     void Start()
-    {
-        
+    {        
     }
 
     // Update is called once per frame
     void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-         {
-             addMaxHealth(14);
-         }
+    {        
     }
 }

@@ -27,11 +27,4 @@ public class FioleUI : MonoBehaviour
         newY = Mathf.Min(newY, maxHeight);
         lRectTransform.sizeDelta = new Vector2(lRectTransform.sizeDelta.x, newY);
      }
-
-     private void Update() {
-         if (Input.GetMouseButtonDown(0))
-         {
-             addMaxHealth(14);
-         }
-     }
 }
