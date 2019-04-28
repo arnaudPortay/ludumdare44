@@ -23,12 +23,9 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Enemy") && !waitForDestroy)
-        {  
-        
+        {          
             other.gameObject.GetComponent<Character>().hp -= damage;
-
             Debug.Log(other.gameObject.GetComponent<Character>().hp );    
-            //Destroy(other.gameObject,1);
         }
 
         if (other.gameObject.CompareTag("Floor"))
