@@ -42,7 +42,7 @@ public class crowdManager : MonoBehaviour
 
     private void FixedUpdate() 
     {
-       Debug.Log( timer += Time.fixedDeltaTime);        
+       timer += Time.fixedDeltaTime;        
 
         if (timer >= feedingRate)
         {
@@ -64,7 +64,7 @@ public class crowdManager : MonoBehaviour
                     lDirection.y = 0;
                     lDirection.Normalize();
                     // Set the y axis
-                    //lDirection.y = Mathf.Clamp(Vector3.Distance(lCrowdMember.transform.position, lTarget),5, 15) + Random.Range(0,maxInaccuracy);
+                    lDirection.y = Mathf.Clamp(Vector3.Distance(lCrowdMember.transform.position, lTarget),5, 15) + Random.Range(0,maxInaccuracy);
 
                     // Compute shooting distance
                     Character lCharacter = lCrowdMember.GetComponent<Character>(); // Character script
