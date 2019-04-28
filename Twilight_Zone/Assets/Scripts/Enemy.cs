@@ -39,4 +39,12 @@ public class Enemy : Character
             anim.SetTrigger("Jump");
         }
     }
+     override public void loseBlood(int damage)
+    {
+        base.loseBlood(damage); 
+        if (hp <= 0)
+        {                 
+            Destroy(gameObject,0);             
+        }
+    }
 }

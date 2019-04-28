@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    public float hp = 100f;
+    public int hp;
 
     public int lMaximalHealth;
 
@@ -19,28 +19,7 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hp <= 0)
-        {
-             if (gameObject.CompareTag("Enemy"))
-            {
-                Destroy(gameObject,0);
-            }   
 
-            if (gameObject.CompareTag("Player"))
-            {
-                // GAME END
-
-            }              
-        }
-
-        //Maximal health
-         if (hp > lMaximalHealth)
-        {
-             if (gameObject.CompareTag("Player"))
-            {
-                hp = lMaximalHealth;
-            }          
-        }
     }
 
     protected void hit() 
@@ -52,5 +31,16 @@ public class Character : MonoBehaviour
     {
         distanceWeapon.GetComponent <DistanceWeapon> ().shoot();
     }
+
+    virtual public void loseBlood(int damage)
+    {
+        hp -= damage;
+    }
+
+    virtual public void gainBlood(int healthPower)
+    {
+        hp += healthPower;
+    }
+
 
 }
