@@ -13,30 +13,41 @@ public class Character : MonoBehaviour
     public int lMaximalHealth;
 
     public GameObject distanceWeapon; 
-    public GameObject meleeWeapon;  
-    // Start is called before the first frame update
-    void Start()
+    public GameObject meleeWeapon;
+
+    protected Animator anim;
+    
+    protected virtual void launchThrowAnimation()
+    {
+
+    }
+
+    protected virtual void launchHitAnimation()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     protected void FixedUpdate() {
-        timerDamage += Time.fixedDeltaTime; 
+        timerDamage += Time.fixedDeltaTime;
+    }
+
+    protected void Awake() {
+        if (anim == null)
+        {
+            anim = gameObject.GetComponent<Animator>();            
+        }
     }
 
     protected void hit() 
     {
+         launchHitAnimation();
         meleeWeapon.GetComponent <MeleeWeapon> ().hit();
     }
 
     protected void shoot()
     {
+        launchThrowAnimation();
         distanceWeapon.GetComponent <DistanceWeapon> ().shoot();
     }
 
@@ -55,6 +66,4 @@ public class Character : MonoBehaviour
         hp += healthPower;
         Debug.Log("hp = " + hp);
     }
-
-
 }

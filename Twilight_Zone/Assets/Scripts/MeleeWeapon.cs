@@ -12,28 +12,15 @@ public class MeleeWeapon : Weapon
     } 
     public void hit()
     {        
-        //if (timer >= attackRate)
-       // {
-            Debug.Log("ATTACK");
-            hitAttack = true;
-            /*
-            Vector3 normalizedThrow = transform.TransformVector(ThrowDirection).normalized;
-            GameObject ltest = Instantiate(projectile, transform.position+ normalizedThrow*offset, transform.rotation);
-            Projectile lTestProjectile = ltest.GetComponent<Projectile>();
-            lTestProjectile.damage = attackValue;
-            lTestProjectile.shoot(normalizedThrow*1000);
-            timer = 0.0f;   
-            */ 
-                
-        //}
+        hitAttack = true;
     }
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Enemy") && hitAttack == true)
         {       
             Debug.Log("Test de l'attaque");
-            other.gameObject.GetComponent<Character>().loseBlood(attackValue);
-            //Debug.Log(other.gameObject.GetComponent<Character>().hp );    
+            other.gameObject.GetComponent<Character>().loseBlood(attackValue);  
+            hitAttack = false;
         }
     }
 }

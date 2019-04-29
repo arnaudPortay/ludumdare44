@@ -5,8 +5,7 @@ using UnityEngine;
 public class Player_Behaviour : Character
 {
     public float speed = 6f;   
-    Vector3 movement;                   // The vector to store the direction of the player's movement.
-    Animator anim;                      // Reference to the animator component.
+    Vector3 movement;                   // The vector to store the direction of the player's movement.                      // Reference to the animator component.
     Rigidbody playerRigidbody;          // Reference to the player's rigidbody.
     int floorMask;                      // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
     float camRayLength = 100f;          // The length of the ray from the camera into the scene.
@@ -17,10 +16,9 @@ public class Player_Behaviour : Character
 
     void Awake ()
     {
+        base.Awake();
         // Create a layer mask for the floor layer.
         floorMask = LayerMask.GetMask ("Floor");
-        // Set up references.
-        anim = GetComponent <Animator> ();
         playerRigidbody = GetComponent <Rigidbody> ();
         if 
             (waveletUi)
@@ -101,8 +99,10 @@ public class Player_Behaviour : Character
     void Animating (float h)
     {
         bool walking = h>0;
+        bool backtrack = h<0;
         // Tell the animator whether or not the player is walking.
         anim.SetBool ("Running", walking);
+        anim.SetBool ("BackTrack", backtrack);
     }
 
 
@@ -128,4 +128,13 @@ public class Player_Behaviour : Character
 
     }
 
+    protected override void launchThrowAnimation()
+    {
+        anim.SetTrigger("Spit");
+    }
+
+     protected override void launchHitAnimation()
+    {
+        anim.SetTrigger("RightAttack");
+    }
 }

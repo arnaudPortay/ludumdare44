@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class Enemy : Character
 {
-        Animator anim;
         private NavMeshAgent navMesh;
 
         private float timer = 0.0f;
