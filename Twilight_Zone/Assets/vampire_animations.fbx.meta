@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 77bf8b80f4f9c1048bde802346b577b1
+guid: e8fb465cfb40ce342b79e68c75f554aa
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable:
@@ -22,14 +22,14 @@ ModelImporter:
       74: -6185155371445809522
     second: Throw
   - first:
-      74: 7721715186239825389
-    second: Armature.001|Action
+      74: -2672305951738281037
+    second: LowerArms.001
   - first:
-      74: -7523534810428418115
-    second: Armature.001|Action.001
+      74: 7229824771423978937
+    second: Armature.001|LowerArms
   - first:
-      74: -1302265262014754640
-    second: Armature.001|RaiseArms
+      74: 2734256676775436905
+    second: Armature.001|LowerArms.001
   - first:
       74: -8385390291748537193
     second: Armature.001|Sit
@@ -65,7 +65,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -74,11 +74,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: LowerArms.001
-      takeName: LowerArms.001
+      name: VampireFretille
+      takeName: VampireFretille
       internalID: 273291971771927100
       firstFrame: 0
-      lastFrame: 24
+      lastFrame: 26
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -248,11 +248,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature.001|Action
-      takeName: Armature.001|Action
-      internalID: 7721715186239825389
+      name: LowerArms.001
+      takeName: LowerArms.001
+      internalID: -2672305951738281037
       firstFrame: 0
-      lastFrame: 1
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -277,40 +277,40 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature.001|Action.001
-      takeName: Armature.001|Action.001
-      internalID: -7523534810428418115
-      firstFrame: 0
-      lastFrame: 1
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Armature.001|RaiseArms
-      takeName: Armature.001|RaiseArms
-      internalID: -1302265262014754640
+      name: Armature.001|LowerArms
+      takeName: Armature.001|LowerArms
+      internalID: 7229824771423978937
       firstFrame: 0
       lastFrame: 336
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.001|LowerArms.001
+      takeName: Armature.001|LowerArms.001
+      internalID: 2734256676775436905
+      firstFrame: 0
+      lastFrame: 335.99997
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -482,7 +482,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.3980289
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -528,10 +528,10 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.3980289
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
