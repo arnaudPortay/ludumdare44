@@ -14,7 +14,11 @@ public class WaveletUI : MonoBehaviour
 
     private void Awake() 
     {
-        lRectTransform = gameObject.GetComponent<RectTransform>();        
+        if (lRectTransform == null)
+        {
+            lRectTransform = gameObject.GetComponent<RectTransform>();        
+        }
+        
     }
 
     public void addMaxHealth(float pPercentage)
@@ -31,7 +35,9 @@ public class WaveletUI : MonoBehaviour
      }
 
     public void updateHealth()
-    {
+    {        
+        Awake();
+    
         float playerHealthPercentage = (float)player.hp*100f/(float)player.lMaximalHealth;
         
         float newY = (CurrentMaxHeight * playerHealthPercentage)/100f;
