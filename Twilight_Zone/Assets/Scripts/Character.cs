@@ -54,19 +54,17 @@ public class Character : MonoBehaviour
     }
 
     virtual public void loseBlood(int damage)
-    {   Debug.Log("test - hp = " + hp);
+    {   
         if (timerDamage >= timeImmunity)
         {
             hp -= damage;
             timerDamage = 0.0f;
-            Debug.Log("hp = " + hp);
         }
     }
 
     virtual public void gainBlood(int healthPower)
     {
         hp += healthPower;
-        Debug.Log("hp = " + hp);
     }
 
 

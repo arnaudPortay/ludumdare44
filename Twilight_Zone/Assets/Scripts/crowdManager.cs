@@ -16,7 +16,7 @@ public class crowdManager : MonoBehaviour
 
     private float animChangeTimer = 0.0f;
 
-    public int TimeBeforeAnimChange = 5;
+    public int TimeBeforeAnimChange = 1;
 
     private void Awake() 
     {
@@ -59,7 +59,7 @@ public class crowdManager : MonoBehaviour
                     Vampire lCharaScript = lCrowdMember.GetComponent<Vampire>();
                     if (lCharaScript != null)
                     {
-                        //lCharaScript.launchOtherAnimation();
+                        lCharaScript.cycleThroughAnimations();
                     }
                 }
             }
