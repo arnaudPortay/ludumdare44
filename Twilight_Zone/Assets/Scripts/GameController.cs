@@ -40,11 +40,15 @@ public class GameController : MonoBehaviour {
 
     private GameObject difficultySelector;
 
+    public GameObject UICanvas;
+
     public void StartGame()
     {
+        Debug.Log("plop");
         difficultySelector.SetActive(true);
         startButton.SetActive(false);
         resumeButton.SetActive(true);
+        
     }
 
     public void ResumeGame()
@@ -58,6 +62,7 @@ public class GameController : MonoBehaviour {
 
         difficultySelector.SetActive(false);
         IsLaunchingGame = true;
+        UICanvas.SetActive(true);
     }
 
     public void SetMedium()
@@ -66,6 +71,7 @@ public class GameController : MonoBehaviour {
 
         difficultySelector.SetActive(false);
         IsLaunchingGame = true;
+        UICanvas.SetActive(true);
     }
 
     public void SetHard()
@@ -74,6 +80,7 @@ public class GameController : MonoBehaviour {
 
         difficultySelector.SetActive(false);
         IsLaunchingGame = true;
+        UICanvas.SetActive(true);
     }
 
     public void SetGodLike()
@@ -82,6 +89,7 @@ public class GameController : MonoBehaviour {
 
         difficultySelector.SetActive(false);
         IsLaunchingGame = true;
+        UICanvas.SetActive(true);
     }
 
     private void Start() {
