@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Difficulty: 0
-  IsMenuDisplayed: 1
+  IsMenuDisplayed: 0
   IsLaunchingGame: 0
-  IsShopping: 0
+  IsShopping: 1
   PlayerWon: 0
   PlayerDied: 0
   Menu: {fileID: 0}
