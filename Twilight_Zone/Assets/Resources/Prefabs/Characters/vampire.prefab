@@ -229,7 +229,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackValue: 20
   attackRate: 1
-  projectile: {fileID: 0}
+  projectile: {fileID: 5300995477400259198, guid: 717c90f717c642444962b68b19e6e719,
+    type: 3}
   ThrowDirection: {x: 0, y: 0, z: 0}
   offset: 1
 --- !u!1 &1506459570922345358
