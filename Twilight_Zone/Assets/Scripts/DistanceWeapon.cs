@@ -6,6 +6,8 @@ public class DistanceWeapon : Weapon
 {
     public GameObject projectile;
     public Vector3 ThrowDirection;
+
+    public float offset = 1f;
     private void Awake() 
     {
         Init();
@@ -14,10 +16,11 @@ public class DistanceWeapon : Weapon
     {
         if (timer >= attackRate)
         {
-            GameObject ltest = Instantiate(projectile, transform.position, transform.rotation);
+            Vector3 normalizedThrow = transform.TransformVector(ThrowDirection).normalized;
+            GameObject ltest = Instantiate(projectile, transform.position+ normalizedThrow*offset, transform.rotation);
             Projectile lTestProjectile = ltest.GetComponent<Projectile>();
             lTestProjectile.damage = attackValue;
-            lTestProjectile.shoot(transform.TransformVector(ThrowDirection).normalized*1000);
+            lTestProjectile.shoot(normalizedThrow*1000);
             timer = 0.0f;        
         }
     }

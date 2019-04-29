@@ -13,6 +13,8 @@ public class Player_Behaviour : Character
 
     public WaveletUI waveletUi;
 
+    public bool dancing =false;
+
     void Awake ()
     {
         // Create a layer mask for the floor layer.
@@ -27,25 +29,28 @@ public class Player_Behaviour : Character
     {
         if (Input.GetMouseButtonDown(0))
         {
+           // Turn the player to face the mouse cursor.
+           TurningToMouse();
            shoot();
         }
         else if (Input.GetMouseButtonDown(1))
         {
+            // Turn the player to face the mouse cursor.
+            TurningToMouse();
             hit();
         }
-
+        if (dancing)
+        {
+            return;
+        }
         // Store the input axes.
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
         // Move the player around the scene.
         Move (h, v);
-
-        // Turn the player to face the mouse cursor.
-        Turning ();
-
         // Animate the player.
-        //Animating (h, v);
+        Animating (h, v);
     }
 
 
@@ -59,10 +64,25 @@ public class Player_Behaviour : Character
 
         // Move the player to it's current position plus the movement.
         playerRigidbody.MovePosition (transform.position + movement);
+
+        Turning (h,v);
     }
 
 
-    void Turning ()
+    void Turning (float h, float v)
+    {
+        if 
+            (h != 0f || v != 0f)
+        {
+            // Create a quaternion (rotation) based on looking down the vector from the player to the mouse.
+            Quaternion newRotatation = Quaternion.LookRotation (movement);
+
+            // Set the player's rotation to this new rotation.
+            playerRigidbody.MoveRotation (newRotatation);
+        }
+    }
+
+    void TurningToMouse ()
     {
         // Create a ray from the mouse cursor on screen in the direction of the camera.
         Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
@@ -92,7 +112,7 @@ public class Player_Behaviour : Character
         bool walking = h != 0f || v != 0f;
 
         // Tell the animator whether or not the player is walking.
-        anim.SetBool ("IsWalking", walking);
+        anim.SetBool ("Running", walking);
     }
 
 

@@ -22,7 +22,7 @@ public class Sound_Manager : MonoBehaviour
     public void startMusic(string Name)
     {
         int lIndex = ClipNames.FindIndex(clipname => clipname == Name );
-        if (lIndex != -1 && lIndex < Clips.Count)
+        if (lIndex != -1 && lIndex < Clips.Count && audioSource.clip != Clips[lIndex])
         {
             audioSource.Stop();
             audioSource.clip = Clips[lIndex]; 

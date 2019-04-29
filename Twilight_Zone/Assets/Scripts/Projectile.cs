@@ -25,7 +25,7 @@ public class Projectile : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy") && !waitForDestroy)
         {          
             other.gameObject.GetComponent<Character>().loseBlood(damage);
-            Debug.Log(other.gameObject.GetComponent<Character>().hp );    
+            //Debug.Log(other.gameObject.GetComponent<Character>().hp );    
         }
 
         if (other.gameObject.CompareTag("Floor"))
