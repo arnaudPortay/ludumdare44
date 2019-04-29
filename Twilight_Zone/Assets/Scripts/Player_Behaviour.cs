@@ -9,12 +9,12 @@ public class Player_Behaviour : Character
     Rigidbody playerRigidbody;          // Reference to the player's rigidbody.
     int floorMask;                      // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
     float camRayLength = 100f;          // The length of the ray from the camera into the scene.
-
+ 
     public WaveletUI waveletUi;
 
     public bool dancing =false;
 
-    void Awake ()
+    new void Awake ()
     {
         base.Awake();
         // Create a layer mask for the floor layer.
@@ -28,7 +28,7 @@ public class Player_Behaviour : Character
     }
 
 
-    void FixedUpdate ()
+    new void FixedUpdate ()
     {
         base.FixedUpdate();
         if (Input.GetMouseButtonDown(1))

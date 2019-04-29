@@ -13,8 +13,9 @@ public class Enemy : Character
 
         public float AttackCoolDown = 2.0f;
     // Start is called before the first frame update
-    void Awake()
+    new void Awake()
     {
+        base.Awake();
         navMesh = gameObject.GetComponent<NavMeshAgent>();
         anim = gameObject.GetComponent<Animator>();
     }
@@ -25,7 +26,7 @@ public class Enemy : Character
 
     }
 
-    private void FixedUpdate() 
+    new private void FixedUpdate() 
     {
         base.FixedUpdate();
         timer += Time.fixedDeltaTime;

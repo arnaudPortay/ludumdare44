@@ -4,17 +4,19 @@ using UnityEngine;
 public class DanceManager : MonoBehaviour
 {
     bool danceStarted;
+    public bool dancefinished = false;
     public GameObject player;
 
     public List<DanceMove> danceMoves;
 
     public GameObject crowdManager;
-
+    public GameObject danceCamera;
+    public GameObject mainCamera;
     public Sound_Manager lSoundManager;
 
     int currentMove;
     int currentStep;
-
+    DanceMove currentFinishedDance;
     int cooldown;
 
     // Start is called before the first frame update
@@ -37,7 +39,7 @@ public class DanceManager : MonoBehaviour
     }
 
     void FixedUpdate() {
-        player.GetComponent<Player_Behaviour>().dancing = danceStarted;
+
     }
 
     void OnGUI()
@@ -46,14 +48,26 @@ public class DanceManager : MonoBehaviour
 
         if (m_Event.type == EventType.KeyDown && cooldown==0)
         {
-             //Debug.Log("Cooldown added"); 
             cooldown = 5;
             if (! danceStarted)
             {
-                if (m_Event.Equals(Event.KeyboardEvent(KeyCode.F.ToString())))
+                if (dancefinished)
                 {
-                    danceStarted = true;
+                    //stop when the dance move has ended
+                    if(!player.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName(currentFinishedDance.DanceName) || player.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
+                    {
+                        dancefinished = false;
+                    }
                 }
+                else
+                {
+                    if (m_Event.Equals(Event.KeyboardEvent(KeyCode.F.ToString())))
+                    {
+                        Debug.Log("Started"); 
+                        danceStarted = true;
+                    }
+                }
+
             }
             else
             {
@@ -88,9 +102,11 @@ public class DanceManager : MonoBehaviour
                         {
                             //Debug.Log("FInished"); 
                             danceStarted = false;
+                            dancefinished = true;
+                            currentFinishedDance = lMove;
                             currentMove = 0;
                             currentStep = 0;
-                            player.GetComponent<Animator>().SetTrigger(lMove.DanceName);
+                            //player.GetComponent<Animator>().SetTrigger(lMove.DanceName);
                             lSoundManager.startMusic(lMove.DanceName);
                         }
                     }
@@ -103,7 +119,17 @@ public class DanceManager : MonoBehaviour
                 }
                 
             }
+            bool dancing = danceStarted || dancefinished;
+            danceCamera.SetActive(dancing);
+            mainCamera.SetActive(!dancing);
+            player.GetComponent<Animator>().SetBool(currentFinishedDance.DanceName,dancefinished);
+            player.GetComponent<Player_Behaviour>().dancing = dancing;
+            if (!dancefinished)
+            {
+                currentFinishedDance = null;
+            }
             
         }
+
     }
 }
