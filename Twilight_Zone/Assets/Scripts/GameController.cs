@@ -107,6 +107,7 @@ public class GameController : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             IsMenuDisplayed = !IsMenuDisplayed;
+            IsLaunchingGame = !IsMenuDisplayed;
         }
         
         if(IsMenuDisplayed || IsShopping)

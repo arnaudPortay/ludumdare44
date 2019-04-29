@@ -85,10 +85,10 @@ public class crowdManager : MonoBehaviour
                         player.transform.position.y,
                         player.transform.position.z + Random.Range(-maxInaccuracy, maxInaccuracy)
                     );
-
+                    
                     Vector3 lDirection = lTarget - lCrowdMember.transform.position;
+                    
                     lDirection.y = 0;
-                    lDirection.Normalize();
                     // Set the y axis
                     //lDirection.y = Mathf.Clamp(Vector3.Distance(lCrowdMember.transform.position, lTarget),5, 15) + Random.Range(0,maxInaccuracy);
 
@@ -96,7 +96,9 @@ public class crowdManager : MonoBehaviour
                     Character lCharacter = lCrowdMember.GetComponent<Character>(); // Character script
                     DistanceWeapon lDistanceWeapon = lCharacter.distanceWeapon.GetComponent<DistanceWeapon>();
                     lDistanceWeapon.projectile = currentFoodType as GameObject;
-                    lDistanceWeapon.ThrowDirection = -lDirection;
+                    lDirection = lDistanceWeapon.transform.InverseTransformVector(lDirection);
+                    lDirection.Normalize();
+                    lDistanceWeapon.ThrowDirection = lDirection;
 
                     // shoot
                     lCrowdMember.GetComponent<Vampire>().shoot();
