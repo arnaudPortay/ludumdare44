@@ -31,7 +31,7 @@ public class Character : MonoBehaviour
     protected void FixedUpdate() {
         timerDamage += Time.fixedDeltaTime;
     }
-
+    
     protected void Awake() {
         if (anim == null)
         {
@@ -48,7 +48,7 @@ public class Character : MonoBehaviour
         
     }
 
-    protected void shoot()
+    public void shoot()
     {
         launchThrowAnimation();
     }
