@@ -370,7 +370,7 @@ Transform:
   m_GameObject: {fileID: 2720697015361802010}
   m_LocalRotation: {x: 0, y: 0.9999772, z: -0, w: -0.0067629847}
   m_LocalPosition: {x: 0.18866768, y: 0, z: 0.21644557}
-  m_LocalScale: {x: 0.5000009, y: 0.5, z: 0.5000009}
+  m_LocalScale: {x: 0.5000016, y: 0.5, z: 0.5000016}
   m_Children:
   - {fileID: 8830612625923288157}
   - {fileID: 7411595128070497995}
@@ -1224,6 +1224,20 @@ Transform:
   m_Father: {fileID: 6922747851814852596}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &304768571
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669392480919}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.1576154
+  m_Height: 0.6
+  m_Direction: 2
+  m_Center: {x: -0.0000010358541, y: 0.003455312, z: -0.05}
 --- !u!136 &2032169691
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1252,20 +1266,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackValue: 15
   attackRate: 0.2
---- !u!136 &304768571
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8296172669392480919}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  m_Radius: 0.1576154
-  m_Height: 0.6
-  m_Direction: 2
-  m_Center: {x: -0.0000010358541, y: 0.003455312, z: -0.05}
 --- !u!1 &8457910207752373071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1577,6 +1577,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MeleeWeapon
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0e7d83076a4b3104b9ad7af8d98cb7f0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0e7d83076a4b3104b9ad7af8d98cb7f0,
         type: 3}

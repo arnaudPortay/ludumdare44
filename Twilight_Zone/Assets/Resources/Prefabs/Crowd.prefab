@@ -44,11 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feedingRate: 2
-  startingFoodName: 
+  startingFoodName: Tomato
   maxInaccuracy: 0.5
-  crowdMembers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  crowdMembers: []
   player: {fileID: 0}
+  TimeBeforeAnimChange: 2
