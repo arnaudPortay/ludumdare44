@@ -58,8 +58,8 @@ public class crowdManager : MonoBehaviour
                 {
                     Vampire lCharaScript = lCrowdMember.GetComponent<Vampire>();
                     if (lCharaScript != null)
-                    {
-                        //lCharaScript.launchOtherAnimation();
+                    {                        
+                        lCharaScript.cycleThroughAnimations();
                     }
                 }
             }
