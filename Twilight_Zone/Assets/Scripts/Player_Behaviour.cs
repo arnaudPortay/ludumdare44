@@ -22,7 +22,11 @@ public class Player_Behaviour : Character
         // Set up references.
         anim = GetComponent <Animator> ();
         playerRigidbody = GetComponent <Rigidbody> ();
-        waveletUi.updateHealth();
+        if 
+            (waveletUi)
+        {
+            waveletUi.updateHealth();
+        }
     }
 
 
@@ -31,13 +35,11 @@ public class Player_Behaviour : Character
         if (Input.GetMouseButtonDown(0))
         {
            // Turn the player to face the mouse cursor.
-           TurningToMouse();
            shoot();
         }
         else if (Input.GetMouseButtonDown(1))
         {
             // Turn the player to face the mouse cursor.
-            TurningToMouse();
             hit();
         }
         if (dancing)
@@ -45,42 +47,30 @@ public class Player_Behaviour : Character
             return;
         }
         // Store the input axes.
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
-
-        // Move the player around the scene.
-        Move (h, v);
+        float h = Input.GetAxisRaw("Vertical");
+        TurningToMouse();
+        if 
+            (h !=0)
+        {
+            // Move the player around the scene.
+            Move (h);
+        }
         // Animate the player.
-        Animating (h, v);
+        Animating (h);
     }
 
 
-    void Move (float h, float v)
+    void Move (float h)
     {
         // Set the movement vector based on the axis input.
-        movement.Set (h, 0f, v);
+        movement.Set (0f, 0f, h);
         
         // Normalise the movement vector and make it proportional to the speed per second.
-        movement = movement.normalized * speed * Time.deltaTime;
+        movement = transform.TransformVector(movement).normalized * speed * Time.deltaTime;
 
         // Move the player to it's current position plus the movement.
         playerRigidbody.MovePosition (transform.position + movement);
 
-        Turning (h,v);
-    }
-
-
-    void Turning (float h, float v)
-    {
-        if 
-            (h != 0f || v != 0f)
-        {
-            // Create a quaternion (rotation) based on looking down the vector from the player to the mouse.
-            Quaternion newRotatation = Quaternion.LookRotation (movement);
-
-            // Set the player's rotation to this new rotation.
-            playerRigidbody.MoveRotation (newRotatation);
-        }
     }
 
     void TurningToMouse ()
@@ -107,11 +97,9 @@ public class Player_Behaviour : Character
     }
 
 
-    void Animating (float h, float v)
+    void Animating (float h)
     {
-        // Create a boolean that is true if either of the input axes is non-zero.
-        bool walking = h != 0f || v != 0f;
-
+        bool walking = h>0;
         // Tell the animator whether or not the player is walking.
         anim.SetBool ("Running", walking);
     }

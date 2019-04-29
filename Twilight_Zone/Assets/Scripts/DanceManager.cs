@@ -50,23 +50,36 @@ public class DanceManager : MonoBehaviour
             cooldown = 5;
             if (! danceStarted)
             {
-                for (int i = 0; i < danceMoves.Count; i++)
+                if (m_Event.Equals(Event.KeyboardEvent(KeyCode.F.ToString())))
                 {
-                    if (m_Event.Equals(Event.KeyboardEvent(danceMoves[i].keyCombination[0].ToString())))
-                    {
-                        //Debug.Log("DanceStarted"); 
-                        danceStarted = true;
-                        currentMove = i;
-                        currentStep = 1;
-                        break;
-                    }                
+                    danceStarted = true;
                 }
             }
             else
             {
-                DanceMove lMove = danceMoves[currentMove];
-                Debug.Log("Dance continued :" + lMove);
-                 if (m_Event.Equals(Event.KeyboardEvent(lMove.keyCombination[currentStep].ToString())))
+                if (currentStep == 0)
+                {
+                    for (int i = 0; i < danceMoves.Count; i++)
+                    {
+                        if (m_Event.Equals(Event.KeyboardEvent(danceMoves[i].keyCombination[0].ToString())))
+                        {
+                            //Debug.Log("DanceStarted"); 
+                            currentMove = i;
+                            currentStep = 1;
+                            break;
+                        }                
+                    }
+                    if 
+                        (currentStep == 0)
+                    {
+                        danceStarted = false;
+                    }
+                }
+                else
+                {
+                    DanceMove lMove = danceMoves[currentMove];
+                    Debug.Log("Dance continued :" + lMove);
+                    if (m_Event.Equals(Event.KeyboardEvent(lMove.keyCombination[currentStep].ToString())))
                     {
                         //Debug.Log("Dance continued for real"); 
                         currentStep++;
@@ -78,7 +91,6 @@ public class DanceManager : MonoBehaviour
                             currentMove = 0;
                             currentStep = 0;
                             player.GetComponent<Animator>().SetTrigger(lMove.DanceName);
-                            
                             lSoundManager.startMusic(lMove.DanceName);
                         }
                     }
@@ -88,6 +100,8 @@ public class DanceManager : MonoBehaviour
                         currentMove = 0;
                         currentStep = 0;
                     }
+                }
+                
             }
             
         }
