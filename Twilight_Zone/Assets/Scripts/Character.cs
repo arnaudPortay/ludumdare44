@@ -6,6 +6,10 @@ public class Character : MonoBehaviour
 {
     public int hp;
 
+    public float timeImmunity = 1f;
+
+    private float timerDamage = 0.0f;
+
     public int lMaximalHealth;
 
     public GameObject distanceWeapon; 
@@ -15,6 +19,20 @@ public class Character : MonoBehaviour
     
     protected virtual void launchThrowAnimation()
     {
+
+    }
+
+    protected virtual void launchHitAnimation()
+    {
+        
+    }
+
+
+    protected void FixedUpdate() {
+        timerDamage += Time.fixedDeltaTime;
+    }
+
+    protected void Awake() {
         if (anim == null)
         {
             anim = gameObject.GetComponent<Animator>();            
@@ -23,7 +41,8 @@ public class Character : MonoBehaviour
 
     protected void hit() 
     {
-
+         launchHitAnimation();
+        meleeWeapon.GetComponent <MeleeWeapon> ().hit();
     }
 
     protected void shoot()
@@ -33,14 +52,18 @@ public class Character : MonoBehaviour
     }
 
     virtual public void loseBlood(int damage)
-    {
-        hp -= damage;
+    {   Debug.Log("test - hp = " + hp);
+        if (timerDamage >= timeImmunity)
+        {
+            hp -= damage;
+            timerDamage = 0.0f;
+            Debug.Log("hp = " + hp);
+        }
     }
 
     virtual public void gainBlood(int healthPower)
     {
         hp += healthPower;
+        Debug.Log("hp = " + hp);
     }
-
-
 }

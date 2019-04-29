@@ -5,8 +5,7 @@ using UnityEngine;
 public class Player_Behaviour : Character
 {
     public float speed = 6f;   
-    Vector3 movement;                   // The vector to store the direction of the player's movement.
-    Animator anim;                      // Reference to the animator component.
+    Vector3 movement;                   // The vector to store the direction of the player's movement.                      // Reference to the animator component.
     Rigidbody playerRigidbody;          // Reference to the player's rigidbody.
     int floorMask;                      // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
     float camRayLength = 100f;          // The length of the ray from the camera into the scene.
@@ -17,10 +16,9 @@ public class Player_Behaviour : Character
 
     void Awake ()
     {
+        base.Awake();
         // Create a layer mask for the floor layer.
         floorMask = LayerMask.GetMask ("Floor");
-        // Set up references.
-        anim = GetComponent <Animator> ();
         playerRigidbody = GetComponent <Rigidbody> ();
         if 
             (waveletUi)
@@ -32,12 +30,13 @@ public class Player_Behaviour : Character
 
     void FixedUpdate ()
     {
-        if (Input.GetMouseButtonDown(0))
+        base.FixedUpdate();
+        if (Input.GetMouseButtonDown(1))
         {
            // Turn the player to face the mouse cursor.
            shoot();
         }
-        else if (Input.GetMouseButtonDown(1))
+        else if (Input.GetMouseButtonDown(0))
         {
             // Turn the player to face the mouse cursor.
             hit();
@@ -112,10 +111,8 @@ public class Player_Behaviour : Character
         base.loseBlood(damage);
         if (hp <= 0)
         {            
-            //Destroy(gameObject,0);               
+            //Destroy(gameObject,0);              
         }
-        Debug.Log("Damage = " + damage);
-        Debug.Log("(-) hp = " + hp);
         waveletUi.updateHealth();
     }
 
@@ -127,9 +124,17 @@ public class Player_Behaviour : Character
         {
             hp = lMaximalHealth;         
         }
-        Debug.Log("(+) hp = " + hp);
         waveletUi.updateHealth();
 
     }
 
+    protected override void launchThrowAnimation()
+    {
+        anim.SetTrigger("Spit");
+    }
+
+     protected override void launchHitAnimation()
+    {
+        anim.SetTrigger("RightAttack");
+    }
 }
