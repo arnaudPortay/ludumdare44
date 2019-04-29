@@ -1220,6 +1220,7 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Radius: 0.1576154
   m_Height: 0.6
   m_Direction: 2
@@ -1234,6 +1235,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
+=======
+>>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 =======
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
   m_Radius: 0.2
