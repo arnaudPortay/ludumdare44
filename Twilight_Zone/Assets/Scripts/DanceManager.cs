@@ -46,7 +46,7 @@ public class DanceManager : MonoBehaviour
 
         if (m_Event.type == EventType.KeyDown && cooldown==0)
         {
-             Debug.Log("Cooldown added"); 
+             //Debug.Log("Cooldown added"); 
             cooldown = 5;
             if (! danceStarted)
             {
@@ -54,7 +54,7 @@ public class DanceManager : MonoBehaviour
                 {
                     if (m_Event.Equals(Event.KeyboardEvent(danceMoves[i].keyCombination[0].ToString())))
                     {
-                        Debug.Log("DanceStarted"); 
+                        //Debug.Log("DanceStarted"); 
                         danceStarted = true;
                         currentMove = i;
                         currentStep = 1;
@@ -68,12 +68,12 @@ public class DanceManager : MonoBehaviour
                 Debug.Log("Dance continued :" + lMove);
                  if (m_Event.Equals(Event.KeyboardEvent(lMove.keyCombination[currentStep].ToString())))
                     {
-                        Debug.Log("Dance continued for real"); 
+                        //Debug.Log("Dance continued for real"); 
                         currentStep++;
                         if 
                             (currentStep == lMove.keyCombination.Count)
                         {
-                            Debug.Log("FInished"); 
+                            //Debug.Log("FInished"); 
                             danceStarted = false;
                             currentMove = 0;
                             currentStep = 0;
