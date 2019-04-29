@@ -713,7 +713,7 @@ GameObject:
   - component: {fileID: 4132631671901183712}
   - component: {fileID: 1345091479881635981}
   - component: {fileID: 1345091479881635980}
-  - component: {fileID: 1345091479881635983}
+  - component: {fileID: 985757329}
   m_Layer: 0
   m_Name: vampire
   m_TagString: Untagged
@@ -786,7 +786,7 @@ CapsuleCollider:
   m_Height: 4.5
   m_Direction: 1
   m_Center: {x: 0, y: 2.1, z: -1.03}
---- !u!114 &1345091479881635983
+--- !u!114 &985757329
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -795,7 +795,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7028804575372018057}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c13f7e2865b1b7458ab0c9ec0088fb3, type: 3}
+  m_Script: {fileID: 11500000, guid: 46ad7ff36e9e0d84ea822660e9d6c8f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
