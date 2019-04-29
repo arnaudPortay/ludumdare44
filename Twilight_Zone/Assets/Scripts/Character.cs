@@ -49,7 +49,7 @@ public class Character : MonoBehaviour
     }
 
     public void shoot()
-    {
+    {        
         launchThrowAnimation();
     }
 
@@ -72,7 +72,6 @@ public class Character : MonoBehaviour
 
     public void onThrowOver()
     {
-        Debug.Log("in");
         distanceWeapon.GetComponent <DistanceWeapon> ().shoot();
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Vampire : Character
 {
     protected override void launchThrowAnimation()
-    {                
+    {         
         anim.SetTrigger("Throw");
     }
 
