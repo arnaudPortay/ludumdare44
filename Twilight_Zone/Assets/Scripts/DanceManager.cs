@@ -63,6 +63,7 @@ public class DanceManager : MonoBehaviour
                 {
                     if (m_Event.Equals(Event.KeyboardEvent(KeyCode.F.ToString())))
                     {
+                        Debug.Log("Started"); 
                         danceStarted = true;
                     }
                 }
@@ -91,6 +92,7 @@ public class DanceManager : MonoBehaviour
                 else
                 {
                     DanceMove lMove = danceMoves[currentMove];
+                    Debug.Log("Dance continued :" + lMove);
                     if (m_Event.Equals(Event.KeyboardEvent(lMove.keyCombination[currentStep].ToString())))
                     {
                         //Debug.Log("Dance continued for real"); 
@@ -115,38 +117,19 @@ public class DanceManager : MonoBehaviour
                         currentStep = 0;
                     }
                 }
-               
+                
             }
-            refreshStatus();
+            bool dancing = danceStarted || dancefinished;
+            danceCamera.SetActive(dancing);
+            mainCamera.SetActive(!dancing);
+            player.GetComponent<Animator>().SetBool(currentFinishedDance.DanceName,dancefinished);
+            player.GetComponent<Player_Behaviour>().dancing = dancing;
+            if (!dancefinished)
+            {
+                currentFinishedDance = null;
+            }
             
         }
-        else if (m_Event.type == EventType.MouseDown)
-        {       
-            danceStarted = false;
-            dancefinished = false;
-            refreshStatus();
-        }
 
-    }
-
-    void refreshStatus()
-    {
-        bool dancing = danceStarted || dancefinished;
-        danceCamera.SetActive(dancing);
-        mainCamera.SetActive(!dancing);
-        if
-            (currentFinishedDance)
-        {
-            player.GetComponent<Animator>().SetBool(currentFinishedDance.DanceName,dancefinished);
-        }
-        Player_Behaviour lBehaviour = player.GetComponent<Player_Behaviour>();
-        lBehaviour.dancing = dancing;
-        lBehaviour.distanceWeapon.SetActive(!dancing);
-        lBehaviour.meleeWeapon.SetActive(!dancing);
-        
-        if (!dancefinished)
-        {
-            currentFinishedDance = null;
-        }
     }
 }
