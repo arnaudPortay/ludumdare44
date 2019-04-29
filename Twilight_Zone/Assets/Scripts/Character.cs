@@ -14,7 +14,7 @@ public class Character : MonoBehaviour
     protected Animator anim;
     
     protected virtual void launchThrowAnimation()
-    {
+    {       
         if (anim == null)
         {
             anim = gameObject.GetComponent<Animator>();            
@@ -41,6 +41,5 @@ public class Character : MonoBehaviour
     {
         hp += healthPower;
     }
-
-
+    
 }

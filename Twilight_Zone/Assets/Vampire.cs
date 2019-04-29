@@ -6,11 +6,12 @@ public class Vampire : Character
 {
     protected override void launchThrowAnimation()
     {
-        base.launchThrowAnimation();
+        base.launchThrowAnimation();        
+        anim.SetTrigger("Throw");
+    }
 
-        if (!anim.GetBool("ArmsUp"))
-        {
-            anim.SetBool("ArmsUp", true);
-        }
+    private void FixedUpdate() {        
+        if (Input.GetKeyDown("space"))
+            shoot();
     }
 }
