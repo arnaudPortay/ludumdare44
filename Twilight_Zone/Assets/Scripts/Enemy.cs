@@ -6,7 +6,8 @@ using UnityEngine.AI;
 public class Enemy : Character
 {
         private NavMeshAgent navMesh;
-
+        public GameObject DeathSmoke;
+        public float DeathTimer = 0.1f;
         private float timer = 0.0f;
 
         public float MinDistAttack = 1.0f;
@@ -44,8 +45,13 @@ public class Enemy : Character
     {   
         base.loseBlood(damage); 
         if (hp <= 0)
-        {                 
-            Destroy(gameObject,0);             
+        {          
+            if(DeathSmoke)
+            {
+                GameObject ltest = Instantiate(DeathSmoke, transform.position, transform.rotation);
+            }
+            Destroy(gameObject,DeathTimer); 
+                       
         }
     }
 }
