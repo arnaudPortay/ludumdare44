@@ -121,7 +121,6 @@ NavMeshSettings:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
 <<<<<<< HEAD
-<<<<<<< HEAD
 --- !u!4 &2963560 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 29bbcc626ac559e4fad1c099e4b2aa17,
@@ -130,8 +129,6 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4807376
 =======
-=======
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 --- !u!1 &211007455
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,9 +221,6 @@ Transform:
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &450083712
-<<<<<<< HEAD
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
-=======
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -278,11 +272,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
-<<<<<<< HEAD
       value: 10
-=======
-      value: 1
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 =======
       value: 1
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
@@ -302,7 +292,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
 <<<<<<< HEAD
     - target: {fileID: 6327572171839665050, guid: 30a1630d207bbf94db75aee78c20e721,
         type: 3}
@@ -385,27 +374,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 240.8229
-=======
-    - target: {fileID: -4216859302048453862, guid: 38b4f0d4d8a6edd4b853afc9e1ba9294,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 240.8229
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
       objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 38b4f0d4d8a6edd4b853afc9e1ba9294,
+    - target: {fileID: 6327572171839665050, guid: 30a1630d207bbf94db75aee78c20e721,
         type: 3}
-<<<<<<< HEAD
       propertyPath: m_LocalScale.x
       value: 0.60000014
-=======
-      propertyPath: m_LocalScale.y
-      value: 240.8229
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
       objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 38b4f0d4d8a6edd4b853afc9e1ba9294,
+    - target: {fileID: 6327572171839665050, guid: 30a1630d207bbf94db75aee78c20e721,
         type: 3}
       propertyPath: m_LocalScale.z
-<<<<<<< HEAD
       value: 0.60000014
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -425,13 +402,6 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &60926014
 =======
-  m_SourcePrefab: {fileID: 100100000, guid: 38b4f0d4d8a6edd4b853afc9e1ba9294, type: 3}
---- !u!1001 &472341445
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
-=======
-      value: 240.8229
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38b4f0d4d8a6edd4b853afc9e1ba9294, type: 3}
 --- !u!1001 &472341445
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
@@ -485,11 +455,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
-<<<<<<< HEAD
       value: 7
-=======
-      value: 4
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 =======
       value: 4
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
@@ -507,7 +473,6 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6a43211c4451cce498d91176877d58ef,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-<<<<<<< HEAD
 <<<<<<< HEAD
       value: 0
       objectReference: {fileID: 0}
@@ -537,9 +502,6 @@ PrefabInstance:
 =======
       value: -92.658005
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
-=======
-      value: -92.658005
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6a43211c4451cce498d91176877d58ef,
         type: 3}
@@ -553,7 +515,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6a43211c4451cce498d91176877d58ef,
         type: 3}
-<<<<<<< HEAD
 <<<<<<< HEAD
       propertyPath: m_LocalPosition.z
       value: 113.92
@@ -12148,38 +12109,10 @@ Transform:
 --- !u!1 &501920094
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 GameObject:
-=======
-      propertyPath: m_LocalScale.z
-      value: 429.4969
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6a43211c4451cce498d91176877d58ef, type: 3}
---- !u!1 &501920094
-GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 501920097}
-  - component: {fileID: 501920096}
-  - component: {fileID: 501920095}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &501920095
-AudioListener:
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   serializedVersion: 6
   m_Component:
   - component: {fileID: 501920097}
@@ -12295,12 +12228,6 @@ PrefabInstance:
 --- !u!20 &501920096
 Camera:
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
-=======
-  m_GameObject: {fileID: 501920094}
-  m_Enabled: 1
---- !u!20 &501920096
-Camera:
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -12308,7 +12235,6 @@ Camera:
   m_GameObject: {fileID: 501920094}
   m_Enabled: 1
   serializedVersion: 2
-<<<<<<< HEAD
 <<<<<<< HEAD
   m_Modification:
     m_TransformParent: {fileID: 1150664113}
@@ -12377,81 +12303,9 @@ Camera:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 0.60000014
-=======
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &501920097
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 501920094}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &615659837
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2720697015361802010, guid: 501c576c823e1104a849d0037d92a728,
-        type: 3}
-      propertyPath: m_Name
-      value: GrandMa
       objectReference: {fileID: 0}
-    - target: {fileID: 1412584771922296073, guid: 501c576c823e1104a849d0037d92a728,
+    - target: {fileID: 6327572171839665050, guid: 30a1630d207bbf94db75aee78c20e721,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 571.89935
-      objectReference: {fileID: 0}
-    - target: {fileID: 1412584771922296073, guid: 501c576c823e1104a849d0037d92a728,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
-      objectReference: {fileID: 0}
-    - target: {fileID: 1412584771922296073, guid: 501c576c823e1104a849d0037d92a728,
-        type: 3}
-<<<<<<< HEAD
       propertyPath: m_LocalScale.z
       value: 0.60000014
       objectReference: {fileID: 0}
@@ -12547,11 +12401,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 140.20724
       objectReference: {fileID: 0}
-=======
-      propertyPath: m_LocalPosition.z
-      value: 140.20724
-      objectReference: {fileID: 0}
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
     - target: {fileID: 1412584771922296073, guid: 501c576c823e1104a849d0037d92a728,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -12576,11 +12425,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
-<<<<<<< HEAD
       value: 64
-=======
-      value: 8
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 =======
       value: 8
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
@@ -12663,11 +12508,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
-<<<<<<< HEAD
       value: 68
-=======
-      value: 7
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 =======
       value: 7
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
@@ -12687,7 +12528,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
 <<<<<<< HEAD
     - target: {fileID: 6327572171839665050, guid: 30a1630d207bbf94db75aee78c20e721,
         type: 3}
@@ -12770,27 +12610,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 5.855356
-=======
-    - target: {fileID: -4216859302048453862, guid: b5e8a9daa7ffcf430932cda43c476b52,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5.855356
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
       objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: b5e8a9daa7ffcf430932cda43c476b52,
+    - target: {fileID: 6327572171839665050, guid: 30a1630d207bbf94db75aee78c20e721,
         type: 3}
-<<<<<<< HEAD
       propertyPath: m_LocalScale.x
       value: 0.60000014
-=======
-      propertyPath: m_LocalScale.y
-      value: 5.855356
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
       objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: b5e8a9daa7ffcf430932cda43c476b52,
+    - target: {fileID: 6327572171839665050, guid: 30a1630d207bbf94db75aee78c20e721,
         type: 3}
       propertyPath: m_LocalScale.z
-<<<<<<< HEAD
       value: 0.60000014
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -12834,11 +12662,6 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1945874021
 =======
-=======
-      value: 5.855356
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
   m_SourcePrefab: {fileID: 100100000, guid: b5e8a9daa7ffcf430932cda43c476b52, type: 3}
 --- !u!1 &877656545
 GameObject:
@@ -12932,9 +12755,6 @@ Transform:
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &892285176
-<<<<<<< HEAD
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
-=======
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12986,11 +12806,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
-<<<<<<< HEAD
       value: 22
-=======
-      value: 3
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 =======
       value: 3
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
@@ -13063,11 +12879,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.y
 <<<<<<< HEAD
-<<<<<<< HEAD
       value: -0
-=======
-      value: 0.74004877
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 =======
       value: 0.74004877
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
@@ -13109,7 +12921,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
 <<<<<<< HEAD
-<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: ac97007c9d09db94db05b0a5bb306b6d, type: 3}
 --- !u!4 &1960495507 stripped
 Transform:
@@ -13124,10 +12935,6 @@ Transform:
   m_PrefabInstance: {fileID: 1257996445}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1991642338
-=======
-  m_SourcePrefab: {fileID: 100100000, guid: 30a1630d207bbf94db75aee78c20e721, type: 3}
---- !u!1001 &1133640921
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 =======
   m_SourcePrefab: {fileID: 100100000, guid: 30a1630d207bbf94db75aee78c20e721, type: 3}
 --- !u!1001 &1133640921
@@ -13182,11 +12989,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
-<<<<<<< HEAD
       value: 67
-=======
-      value: 6
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 =======
       value: 6
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
@@ -13217,7 +13020,6 @@ PrefabInstance:
       value: 0.60000014
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-<<<<<<< HEAD
 <<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: 30a1630d207bbf94db75aee78c20e721, type: 3}
 --- !u!1 &2003022973 stripped
@@ -13275,10 +13077,6 @@ Transform:
   m_PrefabInstance: {fileID: 1128406902}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2038517600
-=======
-  m_SourcePrefab: {fileID: 100100000, guid: 3fadcb96d438d4847a154503e6f3c681, type: 3}
---- !u!1001 &1382925549
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 =======
   m_SourcePrefab: {fileID: 100100000, guid: 3fadcb96d438d4847a154503e6f3c681, type: 3}
 --- !u!1001 &1382925549
@@ -13343,11 +13141,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
-<<<<<<< HEAD
       value: 19
-=======
-      value: 10
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 =======
       value: 10
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
@@ -13384,7 +13178,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
 <<<<<<< HEAD
-<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: 43c9cb2d40638da4d90a7303eeef2520, type: 3}
 --- !u!1 &2044543776 stripped
 GameObject:
@@ -13400,8 +13193,6 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2064722525
 =======
-=======
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
   m_SourcePrefab: {fileID: 100100000, guid: 9052f582d50e3b04484c7a03ce412f92, type: 3}
 --- !u!1 &1382925550 stripped
 GameObject:
@@ -13440,9 +13231,6 @@ Rigidbody:
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!1001 &1444844431
-<<<<<<< HEAD
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
-=======
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13474,11 +13262,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.x
 <<<<<<< HEAD
-<<<<<<< HEAD
       value: -0.00586776
-=======
-      value: -0.87499815
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 =======
       value: -0.87499815
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
@@ -13487,11 +13271,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.y
 <<<<<<< HEAD
-<<<<<<< HEAD
       value: -0.70708245
-=======
-      value: -0.44995606
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 =======
       value: -0.44995606
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
@@ -13500,11 +13280,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
 <<<<<<< HEAD
-<<<<<<< HEAD
       value: -0.70708245
-=======
-      value: -0.009975856
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 =======
       value: -0.009975856
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
@@ -13513,11 +13289,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
 <<<<<<< HEAD
-<<<<<<< HEAD
       value: 0.00586776
-=======
-      value: -0.17837672
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 =======
       value: -0.17837672
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
@@ -13526,11 +13298,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
-<<<<<<< HEAD
       value: 20
-=======
-      value: 2
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 =======
       value: 2
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
@@ -13567,7 +13335,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
 <<<<<<< HEAD
-<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: 7da0471ffb86137449c6cccd6fc42bf7, type: 3}
 --- !u!4 &2070685178 stripped
 Transform:
@@ -13600,10 +13367,6 @@ Transform:
   m_PrefabInstance: {fileID: 648377448}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2109015207
-=======
-  m_SourcePrefab: {fileID: 100100000, guid: 77319825babda3047bcd840d00392a45, type: 3}
---- !u!1001 &1866309829
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 =======
   m_SourcePrefab: {fileID: 100100000, guid: 77319825babda3047bcd840d00392a45, type: 3}
 --- !u!1001 &1866309829
@@ -13658,11 +13421,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
-<<<<<<< HEAD
       value: 12
-=======
-      value: 5
->>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
 =======
       value: 5
 >>>>>>> parent of ae24510... Merge branch 'master' of https://github.com/arnaudPortay/ludumdare44
