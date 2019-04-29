@@ -8,10 +8,4 @@ public class Vampire : Character
     {                
         anim.SetTrigger("Throw");
     }
-
-    public virtual void cycleThroughAnimations()
-    {
-        AnimatorStateInfo lInfo = anim.GetCurrentAnimatorStateInfo(0);
-        //lInfo.
-    }
 }
