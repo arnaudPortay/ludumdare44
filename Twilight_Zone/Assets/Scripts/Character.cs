@@ -38,17 +38,16 @@ public class Character : MonoBehaviour
             anim = gameObject.GetComponent<Animator>();            
         }
     }
-
     protected void hit() 
     {
-         launchHitAnimation();
+        launchHitAnimation();
         meleeWeapon.GetComponent <MeleeWeapon> ().hit();
     }
 
     protected void shoot()
     {
         launchThrowAnimation();
-        distanceWeapon.GetComponent <DistanceWeapon> ().shoot();
+        //distanceWeapon.GetComponent <DistanceWeapon> ().shoot();
     }
 
     virtual public void loseBlood(int damage)
@@ -65,5 +64,11 @@ public class Character : MonoBehaviour
     {
         hp += healthPower;
         Debug.Log("hp = " + hp);
+    }
+
+
+    public void onThrowOver()
+    {
+        distanceWeapon.GetComponent <DistanceWeapon> ().shoot();
     }
 }
