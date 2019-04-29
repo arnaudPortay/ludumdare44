@@ -16,7 +16,7 @@ public class crowdManager : MonoBehaviour
 
     private float animChangeTimer = 0.0f;
 
-    public float TimeBeforeAnimChange= 2.0f;
+    public int TimeBeforeAnimChange = 5;
 
     private void Awake() 
     {
@@ -58,8 +58,8 @@ public class crowdManager : MonoBehaviour
                 {
                     Vampire lCharaScript = lCrowdMember.GetComponent<Vampire>();
                     if (lCharaScript != null)
-                    {                        
-                        lCharaScript.cycleThroughAnimations();
+                    {
+                        //lCharaScript.launchOtherAnimation();
                     }
                 }
             }
@@ -85,24 +85,26 @@ public class crowdManager : MonoBehaviour
                         player.transform.position.y,
                         player.transform.position.z + Random.Range(-maxInaccuracy, maxInaccuracy)
                     );
-
+                    
                     Vector3 lDirection = lTarget - lCrowdMember.transform.position;
+                    
                     lDirection.y = 0;
-                    lDirection.Normalize();
                     // Set the y axis
                     //lDirection.y = Mathf.Clamp(Vector3.Distance(lCrowdMember.transform.position, lTarget),5, 15) + Random.Range(0,maxInaccuracy);
 
                     // Compute shooting distance
                     Character lCharacter = lCrowdMember.GetComponent<Character>(); // Character script
                     DistanceWeapon lDistanceWeapon = lCharacter.distanceWeapon.GetComponent<DistanceWeapon>();
-                    Debug.Log(lDistanceWeapon.projectile = currentFoodType as GameObject);
+                    lDistanceWeapon.projectile = currentFoodType as GameObject;
+                    lDirection = lDistanceWeapon.transform.InverseTransformVector(lDirection);
+                    lDirection.Normalize();
                     lDistanceWeapon.ThrowDirection = lDirection;
 
                     // shoot
-                    lDistanceWeapon.shoot();
+                    lCrowdMember.GetComponent<Vampire>().shoot();
                 }
             }
             timer = 0.0f;           
-        }        
+        }             
     }
 }
