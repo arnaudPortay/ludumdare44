@@ -4758,6 +4758,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crowd
       objectReference: {fileID: 0}
+    - target: {fileID: 5418626543688254895, guid: 7e20d4127cad36947b410d75fb13d891,
+        type: 3}
+      propertyPath: m_TagString
+      value: CrowdController
+      objectReference: {fileID: 0}
     - target: {fileID: 5418626543688254892, guid: 7e20d4127cad36947b410d75fb13d891,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11185,6 +11190,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameControllerObject
       objectReference: {fileID: 0}
+    - target: {fileID: 7428451797966817012, guid: c9a51819df20a3e1c8adaa622ef0d207,
+        type: 3}
+      propertyPath: IsMenuDisplayed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428451797966817012, guid: c9a51819df20a3e1c8adaa622ef0d207,
+        type: 3}
+      propertyPath: IsShopping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7428451797966816971, guid: c9a51819df20a3e1c8adaa622ef0d207,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12155,6 +12170,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemyControllerObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081788005354092255, guid: cf799a6bc8306e029ba72c3bd2dc5c38,
+        type: 3}
+      propertyPath: m_TagString
+      value: EnemyController
       objectReference: {fileID: 0}
     - target: {fileID: 3650440972275837190, guid: cf799a6bc8306e029ba72c3bd2dc5c38,
         type: 3}
