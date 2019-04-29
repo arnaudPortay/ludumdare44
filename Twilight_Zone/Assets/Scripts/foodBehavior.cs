@@ -11,9 +11,9 @@ public class foodBehavior : Projectile
         if (other.gameObject.CompareTag("Player") && !waitForDestroy)
         { 
             other.gameObject.GetComponent<Character>().loseBlood(damage);
-            //other.gameObject.GetComponent<Character>().hp -= damage;
+
             Destroy(gameObject, 0);
-            //Debug.Log(other.gameObject.GetComponent<Character>().hp ); 
+
         }
 
         if (other.gameObject.CompareTag("Player") && waitForDestroy)
@@ -21,7 +21,7 @@ public class foodBehavior : Projectile
             other.gameObject.GetComponent<Character>().gainBlood(lCarePower);
             
             Destroy(gameObject, 0);
-            //Debug.Log(other.gameObject.GetComponent<Character>().hp ); 
+  
         }
 
         if (other.gameObject.CompareTag("Floor"))

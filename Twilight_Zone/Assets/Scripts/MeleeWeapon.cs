@@ -3,8 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MeleeWeapon : Weapon
-{    
-    void hit()
+{   
+    bool hitAttack = false;
+
+    private void Awake() 
+    {
+        Init();
+    } 
+    public void hit()
     {        
+        hitAttack = true;
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.gameObject.CompareTag("Enemy") && hitAttack == true)
+        {       
+            Debug.Log("Test de l'attaque");
+            other.gameObject.GetComponent<Character>().loseBlood(attackValue);  
+            hitAttack = false;
+        }
     }
 }
