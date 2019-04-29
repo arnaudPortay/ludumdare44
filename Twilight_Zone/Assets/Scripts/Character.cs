@@ -48,7 +48,7 @@ public class Character : MonoBehaviour
         
     }
 
-    protected void shoot()
+    public void shoot()
     {
         launchThrowAnimation();
     }
