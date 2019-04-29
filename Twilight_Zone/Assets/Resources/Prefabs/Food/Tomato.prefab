@@ -135,6 +135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 064592dea29534e43896f7655d9ee0f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleTime: 600
+  idleTime: 10
   damage: 20
   lCarePower: 20
