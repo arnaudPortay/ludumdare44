@@ -32,12 +32,13 @@ public class Player_Behaviour : Character
 
     void FixedUpdate ()
     {
-        if (Input.GetMouseButtonDown(0))
+        base.FixedUpdate();
+        if (Input.GetMouseButtonDown(1))
         {
            // Turn the player to face the mouse cursor.
            shoot();
         }
-        else if (Input.GetMouseButtonDown(1))
+        else if (Input.GetMouseButtonDown(0))
         {
             // Turn the player to face the mouse cursor.
             hit();
@@ -110,10 +111,8 @@ public class Player_Behaviour : Character
         base.loseBlood(damage);
         if (hp <= 0)
         {            
-            //Destroy(gameObject,0);               
+            //Destroy(gameObject,0);              
         }
-        Debug.Log("Damage = " + damage);
-        Debug.Log("(-) hp = " + hp);
         waveletUi.updateHealth();
     }
 
@@ -125,7 +124,6 @@ public class Player_Behaviour : Character
         {
             hp = lMaximalHealth;         
         }
-        Debug.Log("(+) hp = " + hp);
         waveletUi.updateHealth();
 
     }

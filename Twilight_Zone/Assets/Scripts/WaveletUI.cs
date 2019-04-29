@@ -38,7 +38,10 @@ public class WaveletUI : MonoBehaviour
         
         // Do not go over max height
         newY = Mathf.Min(newY, CurrentMaxHeight);
-        lRectTransform.sizeDelta = new Vector2(lRectTransform.sizeDelta.x, newY);
+        if (lRectTransform)
+        {
+            lRectTransform.sizeDelta = new Vector2(lRectTransform.sizeDelta.x, newY);
+        }
     } 
 
     // Start is called before the first frame update
