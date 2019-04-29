@@ -63,7 +63,7 @@ public class EnemyController : MonoBehaviour
             nbMaxEnemiesPerWave.Insert(nbMaxEnemiesPerWave.Count, (int) (MaxNbEnemies * DistributionCurve.Evaluate(x)));
         }
 
-        Debug.Log(nbMaxEnemiesPerWave.Count);
+        //Debug.Log(nbMaxEnemiesPerWave.Count);
     }
 
     // Update is called once per frame
@@ -77,8 +77,8 @@ public class EnemyController : MonoBehaviour
         if(currentLivingEnnemies.Count == 0 || Input.GetMouseButtonDown(0))
         {
             currentWaveIndex = Math.Min(currentWaveIndex + 1, MaxNbWaves - 1);
-            Debug.Log(currentWaveIndex);
-        }
+            //Debug.Log(currentWaveIndex);
+        }        
 
         if(needsSpawn && nbMaxEnemiesPerWave.Count > 0 && currentLivingEnnemies.Count < nbMaxEnemiesPerWave[currentWaveIndex])
         {
