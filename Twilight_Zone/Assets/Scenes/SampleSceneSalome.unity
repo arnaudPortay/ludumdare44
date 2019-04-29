@@ -2213,6 +2213,14 @@ PrefabInstance:
       propertyPath: waveletUi
       value: 
       objectReference: {fileID: 1697033616}
+    - target: {fileID: 2032169691, guid: 501c576c823e1104a849d0037d92a728, type: 3}
+      propertyPath: m_Radius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2032169691, guid: 501c576c823e1104a849d0037d92a728, type: 3}
+      propertyPath: m_Height
+      value: 0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 501c576c823e1104a849d0037d92a728, type: 3}
 --- !u!114 &1834893640 stripped

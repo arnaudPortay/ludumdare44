@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,6 +14,8 @@ public class EnemyController : MonoBehaviour
     public int  MaxNbWaves = 3;
 
     public int MaxNbEnemies = 15;
+
+    public int MaximalHealth = 160;
 
     public AnimationCurve DistributionCurve;
 
@@ -34,14 +37,23 @@ public class EnemyController : MonoBehaviour
 
     private bool needsSpawn = true;
 
+    private GameObject enemies;
+
     // Start is called before the first frame update
     void Start()
     {
-        Init();
+        enemies = new GameObject("Enemies");
+        enemies.transform.parent = transform;
     }
 
-    protected void Init()
+    public void ActivateEnnemies(bool activate)
     {
+        enemies.SetActive(activate);
+    }
+
+    public void InitWaves()
+    {
+        nbMaxEnemiesPerWave.Clear();
         //Init timer
         timer = 0.0f;
 
@@ -50,6 +62,8 @@ public class EnemyController : MonoBehaviour
             float x = i > 0 ? 1.0f/(MaxNbWaves - i) : 0.0f;
             nbMaxEnemiesPerWave.Insert(nbMaxEnemiesPerWave.Count, (int) (MaxNbEnemies * DistributionCurve.Evaluate(x)));
         }
+
+        Debug.Log(nbMaxEnemiesPerWave.Count);
     }
 
     // Update is called once per frame
@@ -62,12 +76,15 @@ public class EnemyController : MonoBehaviour
 
         if(currentLivingEnnemies.Count == 0 || Input.GetMouseButtonDown(0))
         {
-            currentWaveIndex++;
+            currentWaveIndex = Math.Min(currentWaveIndex + 1, MaxNbWaves - 1);
+            Debug.Log(currentWaveIndex);
         }
 
-        if(needsSpawn && currentLivingEnnemies.Count < nbMaxEnemiesPerWave[currentWaveIndex])
+        if(needsSpawn && nbMaxEnemiesPerWave.Count > 0 && currentLivingEnnemies.Count < nbMaxEnemiesPerWave[currentWaveIndex])
         {
             GameObject enemy = Instantiate(EnemyType, randomizePosition(SpawnPoint.transform), transform.rotation);
+            enemy.GetComponent<Enemy>().lMaximalHealth = MaximalHealth;
+            enemy.transform.parent = enemies.transform;
             currentLivingEnnemies.Insert(currentLivingEnnemies.Count, enemy);
             needsSpawn = false;
         }
