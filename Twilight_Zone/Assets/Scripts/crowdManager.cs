@@ -16,7 +16,7 @@ public class crowdManager : MonoBehaviour
 
     private float animChangeTimer = 0.0f;
 
-    public int TimeBeforeAnimChange = 1;
+    public float TimeBeforeAnimChange = 0.1f;
 
     private void Awake() 
     {

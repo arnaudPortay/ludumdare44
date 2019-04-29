@@ -88,7 +88,7 @@ public class Player_Behaviour : Character
             // Ensure the vector is entirely along the floor plane.
             playerToMouse.y = 0f;
             // Create a quaternion (rotation) based on looking down the vector from the player to the mouse.
-            Quaternion newRotatation = Quaternion.LookRotation (playerToMouse);
+            Quaternion newRotatation = Quaternion.LookRotation (playerToMouse);            
 
             // Set the player's rotation to this new rotation.
             playerRigidbody.MoveRotation (newRotatation);

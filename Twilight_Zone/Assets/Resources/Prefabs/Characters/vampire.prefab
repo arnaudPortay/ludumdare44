@@ -730,7 +730,7 @@ Transform:
   m_GameObject: {fileID: 7028804575372018057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.37, y: 1.31, z: -0.32}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.60000014, y: 0.6, z: 0.60000014}
   m_Children:
   - {fileID: 1345091481770167547}
   - {fileID: 2490993620690397272}
@@ -804,6 +804,8 @@ MonoBehaviour:
   lMaximalHealth: 100
   distanceWeapon: {fileID: 1345091481770167549}
   meleeWeapon: {fileID: 0}
+  player: {fileID: 0}
+  smoothing: 5
 --- !u!1 &7100026897606699480
 GameObject:
   m_ObjectHideFlags: 0
