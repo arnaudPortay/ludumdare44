@@ -100,8 +100,10 @@ public class Player_Behaviour : Character
     void Animating (float h)
     {
         bool walking = h>0;
+        bool backtrack = h<0;
         // Tell the animator whether or not the player is walking.
         anim.SetBool ("Running", walking);
+        anim.SetBool ("BackTrack", backtrack);
     }
 
 
