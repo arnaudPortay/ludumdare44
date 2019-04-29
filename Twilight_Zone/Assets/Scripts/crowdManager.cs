@@ -62,7 +62,7 @@ public class crowdManager : MonoBehaviour
 
                     Vector3 lDirection = lTarget - lCrowdMember.transform.position;
                     lDirection.y = 0;
-                    //lDirection.Normalize();
+                    lDirection.Normalize();
                     // Set the y axis
                     //lDirection.y = Mathf.Clamp(Vector3.Distance(lCrowdMember.transform.position, lTarget),5, 15) + Random.Range(0,maxInaccuracy);
 
