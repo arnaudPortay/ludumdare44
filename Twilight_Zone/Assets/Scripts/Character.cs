@@ -41,7 +41,7 @@ public class Character : MonoBehaviour
 
     protected void hit() 
     {
-         launchHitAnimation();
+        launchHitAnimation();
         meleeWeapon.GetComponent <MeleeWeapon> ().hit();
     }
 
