@@ -40,14 +40,17 @@ public class Character : MonoBehaviour
     }
     protected void hit() 
     {
-        launchHitAnimation();
-        meleeWeapon.GetComponent <MeleeWeapon> ().hit();
+        // if (!isDistanceAttacking)
+        // {
+            launchHitAnimation();
+            meleeWeapon.GetComponent <MeleeWeapon> ().hit();
+        //}
+        
     }
 
     protected void shoot()
     {
         launchThrowAnimation();
-        //distanceWeapon.GetComponent <DistanceWeapon> ().shoot();
     }
 
     virtual public void loseBlood(int damage)
@@ -69,6 +72,7 @@ public class Character : MonoBehaviour
 
     public void onThrowOver()
     {
+        Debug.Log("in");
         distanceWeapon.GetComponent <DistanceWeapon> ().shoot();
     }
 }
