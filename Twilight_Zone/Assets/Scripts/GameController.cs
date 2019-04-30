@@ -53,7 +53,7 @@ public class GameController : MonoBehaviour {
     public void ResumeGame()
     {
         IsLaunchingGame = true;
-    }
+    }    
 
     public void SetEasy()
     {
