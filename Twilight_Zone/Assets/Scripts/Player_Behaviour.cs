@@ -31,12 +31,12 @@ public class Player_Behaviour : Character
     new void FixedUpdate ()
     {
         base.FixedUpdate();
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetButtonDown("Fire2"))
         {
            // Turn the player to face the mouse cursor.
            shoot();
         }
-        else if (Input.GetMouseButtonDown(0))
+        else if (Input.GetButtonDown("Fire1"))
         {
             // Turn the player to face the mouse cursor.
             hit();
