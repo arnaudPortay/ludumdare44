@@ -137,14 +137,13 @@ public class GameController : MonoBehaviour {
 
             IsLaunchingGame = false;
             IsMenuDisplayed = false;
-            Debug.Log("pouet");
         }
 
         Menu.SetActive(IsMenuDisplayed);
         Shop.SetActive(IsShopping);
 
-        //PlayerDied = player.hp <= 0;
-        //PlayerWon = enemyController.HasNoMoreWaves;
+        PlayerDied = player.hp <= 0;
+        PlayerWon = enemyController.HasNoMoreWaves;
 
         if(PlayerDied)
         {

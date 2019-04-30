@@ -16,7 +16,7 @@ public class MeleeWeapon : Weapon
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.CompareTag("Enemy") && hitAttack == true)
+        if (!other.gameObject.CompareTag(gameObject.tag) && hitAttack == true)
         {       
             other.gameObject.GetComponent<Character>().loseBlood(attackValue);  
             hitAttack = false;
