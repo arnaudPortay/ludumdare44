@@ -137,7 +137,6 @@ public class GameController : MonoBehaviour {
 
             IsLaunchingGame = false;
             IsMenuDisplayed = false;
-            Debug.Log("pouet");
         }
 
         Menu.SetActive(IsMenuDisplayed);

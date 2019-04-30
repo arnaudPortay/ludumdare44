@@ -23,21 +23,28 @@ public class EnemyController : MonoBehaviour
     {
         get
         {
-            return currentWaveIndex >= MaxNbWaves;
+            return currentWaveIndex > MaxNbWaves;
         }
     }
 
     private float timer;
 
-    private int currentWaveIndex = 0;
+    public int currentWaveIndex = 0;
 
-    private List<GameObject> currentLivingEnnemies = new List<GameObject>();
+    public int currentLivingEnnemies
+    {
+        get
+        {
+            return enemies.transform.childCount;
+        }
+    }
 
     private List<int> nbMaxEnemiesPerWave = new List<int>();
 
     private bool needsSpawn = true;
 
     private GameObject enemies;
+    public int currentEnnemiesSpawnedInWave=0;
 
     // Start is called before the first frame update
     void Start()
@@ -74,18 +81,18 @@ public class EnemyController : MonoBehaviour
             return;
         }
 
-        if(currentLivingEnnemies.Count == 0 )//|| Input.GetMouseButtonDown(0))
+        if(currentLivingEnnemies == 0 )//|| Input.GetMouseButtonDown(0))
         {
-            currentWaveIndex = Math.Min(currentWaveIndex + 1, MaxNbWaves - 1);
-            //Debug.Log(currentWaveIndex);
+            currentWaveIndex ++;
+            currentEnnemiesSpawnedInWave = 0;
         }        
 
-        if(needsSpawn && nbMaxEnemiesPerWave.Count > 0 && currentLivingEnnemies.Count < nbMaxEnemiesPerWave[currentWaveIndex])
+        if(!HasNoMoreWaves && needsSpawn && nbMaxEnemiesPerWave.Count > 0 && currentEnnemiesSpawnedInWave < nbMaxEnemiesPerWave[currentWaveIndex])
         {
+            currentEnnemiesSpawnedInWave++;
             GameObject enemy = Instantiate(EnemyType, randomizePosition(SpawnPoint.transform), transform.rotation);
             enemy.GetComponent<Enemy>().lMaximalHealth = MaximalHealth;
             enemy.transform.parent = enemies.transform;
-            currentLivingEnnemies.Insert(currentLivingEnnemies.Count, enemy);
             needsSpawn = false;
         }
 
