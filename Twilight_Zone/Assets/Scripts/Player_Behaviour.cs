@@ -14,6 +14,8 @@ public class Player_Behaviour : Character
 
     public bool dancing =false;
 
+    private ShieldBehavior shield = null;
+
     new void Awake ()
     {
         base.Awake();
@@ -25,6 +27,8 @@ public class Player_Behaviour : Character
         {
             waveletUi.updateHealth();
         }
+
+        shield = gameObject.GetComponentInChildren<ShieldBehavior>();
     }
 
 
@@ -56,6 +60,19 @@ public class Player_Behaviour : Character
         }
         // Animate the player.
         Animating (h);
+
+        //Update invicibility marker
+        if (shield != null)
+        {
+            if (timerDamage >= timeImmunity)
+            {
+                shield.activated = false;
+            }
+            else
+            {
+                shield.activated = true;
+            }
+        }
     }
 
 

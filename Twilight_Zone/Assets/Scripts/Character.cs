@@ -8,7 +8,7 @@ public class Character : MonoBehaviour
 
     public float timeImmunity = 1f;
 
-    private float timerDamage = 0.0f;
+    protected float timerDamage = 0.0f;
 
     public int lMaximalHealth;
 
