@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public GameObject SpawnPoint = null;
+    public GameObject[] SpawnPoints;
 
     public GameObject EnemyType = null;
 
@@ -90,7 +90,8 @@ public class EnemyController : MonoBehaviour
         if(!HasNoMoreWaves && needsSpawn && nbMaxEnemiesPerWave.Count > 0 && currentEnnemiesSpawnedInWave < nbMaxEnemiesPerWave[currentWaveIndex])
         {
             currentEnnemiesSpawnedInWave++;
-            GameObject enemy = Instantiate(EnemyType, randomizePosition(SpawnPoint.transform), transform.rotation);
+            GameObject lSpawnPoint = getRandomSpawnPoint();
+            GameObject enemy = Instantiate(EnemyType, lSpawnPoint.transform.position, lSpawnPoint.transform.rotation);
             enemy.GetComponent<Enemy>().lMaximalHealth = MaximalHealth;
             enemy.transform.parent = enemies.transform;
             needsSpawn = false;
@@ -103,9 +104,16 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    private Vector3 randomizePosition(Transform trsf)
+    private GameObject getRandomSpawnPoint()
     {
-        return trsf.position;
+        if (SpawnPoints.Length > 0)
+        {
+            return SpawnPoints[UnityEngine.Random.Range(0, SpawnPoints.Length)];
+        }
+        else
+        {
+            return null;
+        }
     }
     private void FixedUpdate() 
     {
