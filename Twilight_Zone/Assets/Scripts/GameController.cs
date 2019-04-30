@@ -44,7 +44,6 @@ public class GameController : MonoBehaviour {
 
     public void StartGame()
     {
-        Debug.Log("plop");
         difficultySelector.SetActive(true);
         startButton.SetActive(false);
         resumeButton.SetActive(true);

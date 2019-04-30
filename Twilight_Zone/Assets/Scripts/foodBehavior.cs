@@ -8,7 +8,7 @@ public class foodBehavior : Projectile
     
     private void OnTriggerEnter(Collider other) {
         
-        if (other.gameObject.CompareTag("Player") && !waitForDestroy)
+        if (other.gameObject.CompareTag("Player") && !waitForDestroy && other.gameObject.GetComponent<Character>())
         { 
             other.gameObject.GetComponent<Character>().loseBlood(damage);
 
@@ -16,7 +16,7 @@ public class foodBehavior : Projectile
 
         }
 
-        if (other.gameObject.CompareTag("Player") && waitForDestroy)
+        if (other.gameObject.CompareTag("Player") && waitForDestroy && other.gameObject.GetComponent<Character>())
         { 
             other.gameObject.GetComponent<Character>().gainBlood(lCarePower);
             

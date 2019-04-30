@@ -23,7 +23,7 @@ public class EnemyController : MonoBehaviour
     {
         get
         {
-            return currentWaveIndex > MaxNbWaves;
+            return currentWaveIndex >= MaxNbWaves;
         }
     }
 
@@ -76,16 +76,16 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(HasNoMoreWaves)
-        {
-            return;
-        }
-
         if(currentLivingEnnemies == 0 )//|| Input.GetMouseButtonDown(0))
         {
             currentWaveIndex ++;
             currentEnnemiesSpawnedInWave = 0;
-        }        
+        }
+
+        if(HasNoMoreWaves )
+        {
+            return;
+        }
 
         if(!HasNoMoreWaves && needsSpawn && nbMaxEnemiesPerWave.Count > 0 && currentEnnemiesSpawnedInWave < nbMaxEnemiesPerWave[currentWaveIndex])
         {
