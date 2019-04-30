@@ -63,7 +63,7 @@ public class DanceManager : MonoBehaviour
                 {
                     if (m_Event.Equals(Event.KeyboardEvent(KeyCode.F.ToString())))
                     {
-                        danceStarted = true;
+                        danceStarted = true;                        
                     }
                 }
 
@@ -106,6 +106,7 @@ public class DanceManager : MonoBehaviour
                             currentStep = 0;
                             //player.GetComponent<Animator>().SetTrigger(lMove.DanceName);
                             lSoundManager.startMusic(lMove.DanceName);
+                            player.GetComponent<ParticleSystem>().Play();
                         }
                     }
                     else
@@ -137,12 +138,16 @@ public class DanceManager : MonoBehaviour
         if
             (currentFinishedDance)
         {
-            player.GetComponent<Animator>().SetBool(currentFinishedDance.DanceName,dancefinished);
+            player.GetComponent<Animator>().SetBool(currentFinishedDance.DanceName,dancefinished);            
         }
         Player_Behaviour lBehaviour = player.GetComponent<Player_Behaviour>();
         lBehaviour.dancing = dancing;
         lBehaviour.distanceWeapon.SetActive(!dancing);
         lBehaviour.meleeWeapon.SetActive(!dancing);
+        if (!dancing)
+        {
+            player.GetComponent<ParticleSystem>().Stop();            
+        }
         
         if (!dancefinished)
         {
