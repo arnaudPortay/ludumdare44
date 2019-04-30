@@ -74,7 +74,7 @@ public class EnemyController : MonoBehaviour
             return;
         }
 
-        if(currentLivingEnnemies.Count == 0 || Input.GetMouseButtonDown(0))
+        if(currentLivingEnnemies.Count == 0 )//|| Input.GetMouseButtonDown(0))
         {
             currentWaveIndex = Math.Min(currentWaveIndex + 1, MaxNbWaves - 1);
             //Debug.Log(currentWaveIndex);

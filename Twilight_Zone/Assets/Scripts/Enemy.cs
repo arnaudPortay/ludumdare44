@@ -39,6 +39,7 @@ public class Enemy : Character
         {
             timer = 0.0f;
             anim.SetTrigger("Jump");
+            hit();
         }
     }
      override public void loseBlood(int damage)

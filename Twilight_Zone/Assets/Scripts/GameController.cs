@@ -143,8 +143,8 @@ public class GameController : MonoBehaviour {
         Menu.SetActive(IsMenuDisplayed);
         Shop.SetActive(IsShopping);
 
-        //PlayerDied = player.hp <= 0;
-        //PlayerWon = enemyController.HasNoMoreWaves;
+        PlayerDied = player.hp <= 0;
+        PlayerWon = enemyController.HasNoMoreWaves;
 
         if(PlayerDied)
         {
