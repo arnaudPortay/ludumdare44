@@ -42,6 +42,18 @@ public class GameController : MonoBehaviour {
 
     public GameObject UICanvas;
 
+    public bool gameStarted = false;
+
+    void showUI()
+    {
+        if (UICanvas != null)
+        {
+            UICanvas.transform.GetChild(0).gameObject.SetActive(true);
+            UICanvas.transform.GetChild(1).gameObject.SetActive(true);
+            UICanvas.transform.GetChild(2).gameObject.SetActive(true);
+        }
+    }
+
     public void StartGame()
     {
         difficultySelector.SetActive(true);
@@ -60,8 +72,8 @@ public class GameController : MonoBehaviour {
         Difficulty = DifficultyLevel.Easy;
 
         difficultySelector.SetActive(false);
-        IsLaunchingGame = true;
-        UICanvas.SetActive(true);
+        IsLaunchingGame = true;        
+        showUI();
     }
 
     public void SetMedium()
@@ -70,7 +82,7 @@ public class GameController : MonoBehaviour {
 
         difficultySelector.SetActive(false);
         IsLaunchingGame = true;
-        UICanvas.SetActive(true);
+        showUI();
     }
 
     public void SetHard()
@@ -79,7 +91,7 @@ public class GameController : MonoBehaviour {
 
         difficultySelector.SetActive(false);
         IsLaunchingGame = true;
-        UICanvas.SetActive(true);
+        showUI();
     }
 
     public void SetGodLike()
@@ -88,7 +100,7 @@ public class GameController : MonoBehaviour {
 
         difficultySelector.SetActive(false);
         IsLaunchingGame = true;
-        UICanvas.SetActive(true);
+        showUI();
     }
 
     private void Start() {
@@ -136,6 +148,7 @@ public class GameController : MonoBehaviour {
 
             IsLaunchingGame = false;
             IsMenuDisplayed = false;
+            gameStarted = true;
         }
 
         Menu.SetActive(IsMenuDisplayed);
