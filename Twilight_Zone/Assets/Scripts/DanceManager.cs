@@ -12,7 +12,9 @@ public class DanceManager : MonoBehaviour
     public GameObject crowdManager;
     public GameObject danceCamera;
     public GameObject mainCamera;
-    public Sound_Manager lSoundManager;
+    public Sound_Manager soundManager;
+
+    public GameObject enterDanceModeUI;
 
     int currentMove;
     int currentStep;
@@ -63,7 +65,7 @@ public class DanceManager : MonoBehaviour
                 {
                     if (m_Event.Equals(Event.KeyboardEvent(KeyCode.F.ToString())))
                     {
-                        danceStarted = true;                        
+                        danceStarted = true;
                     }
                 }
 
@@ -105,7 +107,7 @@ public class DanceManager : MonoBehaviour
                             currentMove = 0;
                             currentStep = 0;
                             //player.GetComponent<Animator>().SetTrigger(lMove.DanceName);
-                            lSoundManager.startMusic(lMove.DanceName);
+                            soundManager.startMusic(lMove.DanceName);
                             player.GetComponent<ParticleSystem>().Play();
                         }
                     }
@@ -144,6 +146,11 @@ public class DanceManager : MonoBehaviour
         lBehaviour.dancing = dancing;
         lBehaviour.distanceWeapon.SetActive(!dancing);
         lBehaviour.meleeWeapon.SetActive(!dancing);
+        if (enterDanceModeUI != null)
+        {
+            enterDanceModeUI.SetActive(!dancing);
+        }
+        
         if (!dancing)
         {
             player.GetComponent<ParticleSystem>().Stop();            

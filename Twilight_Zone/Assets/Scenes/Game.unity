@@ -2651,6 +2651,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1451674772}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &337556752 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3906437420794111006, guid: d05771448dc09724894ea23c2896cd94,
+    type: 3}
+  m_PrefabInstance: {fileID: 1502233241}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &341523754 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7028804575372018057, guid: 30a1630d207bbf94db75aee78c20e721,
@@ -10644,7 +10650,7 @@ PrefabInstance:
     - target: {fileID: 575827167674325661, guid: d05771448dc09724894ea23c2896cd94,
         type: 3}
       propertyPath: m_Interactable
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05771448dc09724894ea23c2896cd94, type: 3}
@@ -12818,6 +12824,12 @@ Transform:
   m_Father: {fileID: 1824858367}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1793199570 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5418626543688254895, guid: 7e20d4127cad36947b410d75fb13d891,
+    type: 3}
+  m_PrefabInstance: {fileID: 752002131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1794198413 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: b3e745e73bb1e0d4ba1b0e366f8627bc,
@@ -13055,10 +13067,11 @@ MonoBehaviour:
   - {fileID: 1472533580}
   - {fileID: 1982152578}
   - {fileID: 1790686574}
-  crowdManager: {fileID: 0}
+  crowdManager: {fileID: 1793199570}
   danceCamera: {fileID: 667949502}
   mainCamera: {fileID: 501920094}
-  lSoundManager: {fileID: 1455083260}
+  soundManager: {fileID: 1455083260}
+  enterDanceModeUI: {fileID: 337556752}
 --- !u!4 &1824858367
 Transform:
   m_ObjectHideFlags: 0
